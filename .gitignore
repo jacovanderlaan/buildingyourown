@@ -1,0 +1,5 @@
+# Build tooling and design notes live in the content folder, not in this public repo (ADR-126)
+*.py
+_src/
+**/IMAGE-CATALOG.md
+**/briefs.md
