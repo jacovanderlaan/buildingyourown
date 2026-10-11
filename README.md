@@ -3,7 +3,7 @@
 Landing site for the Build Days: one-day, hands-on AI build workshops for innovators in small and mid-sized companies. Static HTML + CSS, no build step, GitHub Pages.
 
 - `index.html` — the one page.
-- `assets/site.css` — the family token block (between the `shared tokens` markers, synced by `W:/systems/code/rules/sync_tokens.py`; do not edit there) plus this site's own layout below it.
+- `assets/site.css` — the family token block (between the `shared tokens` markers, synced from the family design tokens; do not edit there) plus this site's own layout below it.
 - `assets/*.webp` — illustrations, see `assets/IMAGE-CATALOG.md`; regenerate with `_gen_images.py` (needs `OPENAI_API_KEY`).
 
 ## Go-live checklist
