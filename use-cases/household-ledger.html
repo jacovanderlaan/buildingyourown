@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>A household and business ledger you own — Building Your Own</title>
+<meta name="description" content="Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The finance app becomes a view, not a vault." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Accounting and bank transactions</div> 
+  <h1>A household and business ledger you own</h1>
+  <p class="sub">Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The finance app becomes a view, not a vault.</p>
+  <img class="hero-img" src="../assets/img/household-ledger-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>a home-finance app (MijnGeldzaken)</dd></div><div><dt>Built with</dt><dd>Python, DuckDB, one static HTML app</dd></div><div><dt>In numbers</dt><dd>14,624 transactions since 2002 · 32 accounts</dd></div></dl>
+  <h2>The situation</h2>
+<p>Most people keep their money overview in an app they rent: a budgeting tool, the bank's own dashboard, a spreadsheet that breaks every January. The data lives in the app. When the app changes or stops, the history goes with it.</p>
+<h2>What I built</h2>
+<p>A small importer reads the export files of every bank and card I use and writes them into one database: accounts, transactions, and for every row who it belongs to and whether it is personal or business. A rule file (plain YAML, one line per pattern) decides the category. One screen in my own app shows the result per month, per category, per trip.</p>
+<h2>The structure underneath</h2>
+<ul>
+<li><strong>One table of accounts, one of transactions</strong> — the same shape for every bank.</li>
+<li><strong>Rules as data:</strong> "this pattern → this category" lives in a file anyone can read and change, not inside a black box.</li>
+<li><strong>The export file is kept.</strong> The database can be rebuilt from it at any time.</li>
+</ul>
+<h2>What went wrong, and what it taught me</h2>
+<p>Bank links (PSD2) expire quietly. Five of six accounts at one bank had not synced for months before I noticed. The fix is not a better link but a warning: <em>consent expires in 12 days</em>. Build the alarm before you trust the automation.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring one month of exported transactions (anonymised) and five rules you apply in your head. By the afternoon you have a categorised overview and a rule file you can extend.</p>
+  <div class="callout"><p><strong>Try it on a Build Day:</strong> <a href="../samples/categorise-bank-lines.html">Categorise bank lines with a rule file</a></p></div>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/rules-as-data.html">Rules as Data</a> <span class="muted">— Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model.</span></li><li><a href="https://structurebeatsmagic.com/concepts/rules-you-can-verify.html">Rules You Can Verify</a> <span class="muted">— &#x27;2-space indent&#x27; is a rule; &#x27;format code properly&#x27; is a wish. A rule the system can&#x27;t check is decoration.</span></li><li><a href="https://structurebeatsmagic.com/concepts/silence-is-not-absence-of-failure.html">Silence Is Not Absence of Failure</a> <span class="muted">— No complaints does not mean no problems. It usually means people adapted to the errors and stopped mentioning them.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

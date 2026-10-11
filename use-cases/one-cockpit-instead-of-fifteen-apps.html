@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>One cockpit instead of fifteen apps — Building Your Own</title>
+<meta name="description" content="Actions, ideas, incidents, finance, documents and photos — all as files with status fields, all readable in one app on the phone." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">The rest of the business OS</div> 
+  <h1>One cockpit instead of fifteen apps</h1>
+  <p class="sub">Actions, ideas, incidents, finance, documents and photos — all as files with status fields, all readable in one app on the phone.</p>
+  <img class="hero-img" src="../assets/img/one-cockpit-instead-of-fifteen-apps-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>a dashboard per tool</dd></div><div><dt>Built with</dt><dd>one Python server without frameworks, one HTML file, about 49 DuckDB databases</dd></div><div><dt>In numbers</dt><dd>699 tracked items · 16 cockpits in one app</dd></div></dl>
+  <h2>The situation</h2>
+<p>Every tool brings its own dashboard. Nobody looks at fifteen dashboards.</p>
+<h2>What I built</h2>
+<p>Every action, idea and incident is a small file with a status field. A script collects them into one table; one app shows them — next to finance, receipts, documents, photos and trips — on my phone. The app has no build step and no framework: one server file and one page.</p>
+<h2>The structure underneath</h2>
+<p>When the data has one shape, the cockpit is cheap. AI generated most of the screens; the work was in the structure.</p>
+<h2>Honest note</h2>
+<p>It is built for one person. It has no login of its own and relies on a private network. A company version needs authentication first.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring the three lists you check every week. Give them one shape, and build one page that shows all three.</p>
+  <div class="callout"><p><strong>Try it on a Build Day:</strong> <a href="../samples/mini-cockpit.html">A cockpit for the three lists you check every week</a></p></div>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/eat-your-own-dogfood.html">Eat Your Own Dogfood</a> <span class="muted">— Use your own tool/method on your own real work before and while you ask anyone else to — dogfooding surfaces the flaws a demo hides.</span></li><li><a href="https://breakthroughmodeling.com/concepts/deliberate-simplicity.html">Deliberate Simplicity</a> <span class="muted">— Make each part as plain as it can be without losing what matters — reuse only the fraction you actually need, and strip the rest.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/proof-of-concept.html">From proof of concept to something you rely on</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

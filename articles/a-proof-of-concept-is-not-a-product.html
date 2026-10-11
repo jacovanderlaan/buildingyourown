@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>A Proof of Concept Is Not a Product — and That Is the Point — Building Your Own</title>
+<meta name="description" content="What changes between the first version that runs and the one a business can rely on" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html" class="on">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Article</div>
+  <h1>A Proof of Concept Is Not a Product — and That Is the Point</h1>
+  <p class="sub">What changes between the first version that runs and the one a business can rely on</p>
+  <p class="muted">By Jaco van der Laan</p>
+  
+  <p>With AI writing the code, a working proof of concept now takes an afternoon. That is the good news. The bad news is that it looks exactly like a product. Same screen, same numbers, same confidence. The difference only shows up weeks later, on the day it quietly stops being true.</p>
+<h2>A demo answers one question</h2>
+<p>A proof of concept answers <em>can this work?</em> It runs once, on data you chose, while you watch. That is all it has to do, and it should be built for exactly that: fast, rough, and thrown away without regret.</p>
+<p>A tool you rely on answers a different question: <em>is this still true today?</em> It runs when you are not looking, on data you did not check, for people who assume it is right. Almost everything that separates the two is invisible in a demo.</p>
+<h2>Three things a demo never shows</h2>
+<p><strong>1. That it stopped.</strong> I kept a local copy of my CRM data for analysis. It answered every question I asked it. It had also stopped updating twenty months earlier; three import scripts existed and none of them had an owner. Nothing failed. Nothing warned. A silent copy looks exactly like a fresh one. The fix was a few lines: the import now fails loudly when the copy is more than seven days old.</p>
+<p><strong>2. That it did less than it said.</strong> A document import reported success for every batch. Only when I started counting what had actually arrived — with a fingerprint of each file and a confirmation from the system — did it show that a third of the files were duplicates and some had never landed at all. <em>Exit code 0</em> is a report of the work, not evidence of it.</p>
+<p><strong>3. Who it is for.</strong> My own cockpit app runs sixteen screens over about 49 small databases and I use it every day. It has no login of its own; it relies on a private network. For one person that is a reasonable choice. For a company it is the first thing to build, before the second screen.</p>
+<h2>What to add, in order</h2>
+<p>When a proof of concept earns its place, I add these before any new feature:</p>
+<ol>
+<li><strong>A date on every copy.</strong> When was this data last refreshed? Show it on the screen.</li>
+<li><strong>An alarm on that date.</strong> Too old means a loud failure, not a stale answer.</li>
+<li><strong>A count against the source.</strong> Not "it ran", but "it holds what the source holds".</li>
+<li><strong>Dry run by default.</strong> Anything that writes, deletes or sends first shows what it would do.</li>
+<li><strong>An owner.</strong> One person, by name, for each import.</li>
+<li><strong>Access.</strong> Who may see this, and how do they log in?</li>
+</ol>
+<p>None of this is interesting to demo. All of it is what makes the demo still true next quarter.</p>
+<h2>Keep both, on purpose</h2>
+<p>I am not arguing against quick prototypes. I build more of them than ever, and most should stay prototypes. The mistake is not building a toy; it is letting a toy drift into a role where people depend on it without anyone deciding that it should.</p>
+<p>So decide it out loud. Name it a proof of concept while it is one. When it becomes something the business relies on, give it the date, the alarm, the count and the owner — and only then call it done.</p>
+  <h2>Use cases in this article</h2><ul><li><a href="../use-cases/the-mirror-that-went-stale.html">The mirror that went stale and nobody noticed</a></li><li><a href="../use-cases/ocr-that-keeps-its-own-receipts.html">Document intake that keeps its own receipts</a></li><li><a href="../use-cases/one-cockpit-instead-of-fifteen-apps.html">One cockpit instead of fifteen apps</a></li></ul>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/a-toy-vs-an-instrument.html">A Toy vs an Instrument</a> <span class="muted">— Without structure AI is a toy; with structure it becomes an instrument.</span></li><li><a href="https://structurebeatsmagic.com/concepts/the-demo-agent-and-the-production-agent.html">The Demo Agent and the Production Agent</a> <span class="muted">— The demo is one prompt, one tool call, one context window. Production is planning, layered memory, guardrails, observability and eval loops — and the gap is not model quality.</span></li><li><a href="https://structurebeatsmagic.com/concepts/proof-not-slides.html">Proof, Not Slides</a> <span class="muted">— Ground every claim in real numbers and real systems; never fabricate.</span></li><li><a href="https://structurebeatsmagic.com/concepts/silence-is-not-absence-of-failure.html">Silence Is Not Absence of Failure</a> <span class="muted">— No complaints does not mean no problems. It usually means people adapted to the errors and stopped mentioning them.</span></li><li><a href="https://structurebeatsmagic.com/concepts/uptime-is-not-correctness.html">Uptime Is Not Correctness</a> <span class="muted">— Monitoring proves the system ran. Observability for AI has to prove the answer was right — and those are different instruments.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/proof-of-concept.html">From proof of concept to something you rely on</a><a class="chip" href="../topics/privacy-and-control.html">Privacy and control</a></div>
+  <p><a href="index.html">&larr; All articles</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

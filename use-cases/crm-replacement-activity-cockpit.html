@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Replacing a CRM before the renewal date — Building Your Own</title>
+<meta name="description" content="Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixed exit date." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">CRM, contacts and relationships</div> <span class="badge">in progress</span>
+  <h1>Replacing a CRM before the renewal date</h1>
+  <p class="sub">Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixed exit date.</p>
+  <img class="hero-img" src="../assets/img/crm-replacement-activity-cockpit-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>a rented CRM (Cloze), renewal July 2027</dd></div><div><dt>Built with</dt><dd>one static HTML app over DuckDB; data model after Silverston&#x27;s Work Effort</dd></div><div><dt>In numbers</dt><dd>7,574 people · 4,106 companies · 992 projects mirrored</dd></div></dl>
+  <h2>The situation</h2>
+<p>A CRM renewal is a moment of truth: pay again, move to a competitor, or stop. Moving means migrating data into someone else's model once more.</p>
+<h2>What I am building</h2>
+<p>First a <strong>mirror</strong> of the CRM (people, companies, projects, agreements) that I can query and write to, with dry-run on by default. Then my <strong>own cockpit</strong> on that mirror, designed from a teardown of what the CRM actually does well. The heart is one generic, recursive <em>Activity</em> entity — a project, a meeting, a deal and a to-do are all activities — taken from a classic data-modeling pattern.</p>
+<h2>Status</h2>
+<p>Mirror and write layer: built. People, organisations and project screens: built in September 2026. The exit date is fixed: before the next renewal.</p>
+<h2>The structure underneath</h2>
+<p>Model the work, not the tool. Once activities are modelled properly, the screens are cheap — AI generates them.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring an export of your contacts or deals. Draw the three or four entities you really use; most people find they use a fraction of their CRM.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/proven-patterns.html">Proven Patterns</a> <span class="muted">— Proven shapes you reach for instead of inventing — a pattern captures a repeatable solution (Data Vault, dimensional, temporal) so you compose from known-good parts.</span></li><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li><li><a href="https://breakthroughmodeling.com/concepts/deliberate-simplicity.html">Deliberate Simplicity</a> <span class="muted">— Make each part as plain as it can be without losing what matters — reuse only the fraction you actually need, and strip the rest.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/build-or-buy.html">Build, buy or rent</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

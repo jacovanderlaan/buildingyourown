@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>A photo pipeline that knows what is private — Building Your Own</title>
+<meta name="description" content="Every new photo is filed by day and activity, gets a metadata file, and is classified private, shared or never-share by rules on its folder — before anything leaves the house." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Digital asset management</div> 
+  <h1>A photo pipeline that knows what is private</h1>
+  <p class="sub">Every new photo is filed by day and activity, gets a metadata file, and is classified private, shared or never-share by rules on its folder — before anything leaves the house.</p>
+  <img class="hero-img" src="../assets/img/media-pipeline-with-visibility-rules-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>cloud photo sync with one setting for everything</dd></div><div><dt>Built with</dt><dd>Python pipeline, folder notes, encrypted network storage</dd></div><div><dt>In numbers</dt><dd>206,092 files tracked · runs daily at 07:30</dd></div></dl>
+  <h2>The situation</h2>
+<p>Cloud photo services have one switch: everything goes up, or nothing does. Real life has more categories.</p>
+<h2>What I built</h2>
+<p>A daily pipeline: new photos land in an inbox, are filed into day and activity folders, get a sidecar, and are classified by <strong>rules written on the folder</strong>: private, shared, needs review, never. Only then are they pushed to network storage, where viewers read them. Dry-run is the default everywhere; 35 tests guard the rules.</p>
+<h2>What went wrong</h2>
+<p>Days with subfolders were skipped, so a quarter of one day's photos got no sidecar. A count, not a feeling, found it.</p>
+<h2>The structure underneath</h2>
+<p>Visibility is data on the folder, decided once, applied every time.</p>
+<h2>Start on a Build Day</h2>
+<p>For a company: the same pipeline sorts project photos, site inspections or product shots, and decides which may go on the website.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/deterministic-by-design.html">Deterministic by Design</a> <span class="muted">— Deliberate is whether the structure was chosen; deterministic is whether the output repeats. A toy is neither on the second try.</span></li><li><a href="https://structurebeatsmagic.com/concepts/rules-you-can-verify.html">Rules You Can Verify</a> <span class="muted">— &#x27;2-space indent&#x27; is a rule; &#x27;format code properly&#x27; is a wish. A rule the system can&#x27;t check is decoration.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/privacy-and-control.html">Privacy and control</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

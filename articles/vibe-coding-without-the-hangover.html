@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Vibe Coding Without the Hangover — Building Your Own</title>
+<meta name="description" content="Eight practices that keep the speed of AI-written code and drop the surprises" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html" class="on">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Article</div>
+  <h1>Vibe Coding Without the Hangover</h1>
+  <p class="sub">Eight practices that keep the speed of AI-written code and drop the surprises</p>
+  <p class="muted">By Jaco van der Laan</p>
+  
+  <p>Vibe coding — describing what you want and letting the AI write the code — is how most of my own tools were built this year. It is fast enough to change what is worth building. It also produces a particular kind of hangover: code that works on the first try, looks finished, and is wrong in a way nobody notices for weeks.</p>
+<p>These are the practices I use to keep the speed and lose the hangover. None of them needs programming skill. All of them need discipline.</p>
+<h2>1. Write the spec, not the prompt</h2>
+<p>A prompt asks for code. A spec says what must be true when the code is done: which input, which output, which cases must be refused. Write the spec in a file, not in the chat. The next session, the next tool, and the next person can read it.</p>
+<h2>2. Give the AI a standing instruction file</h2>
+<p>Every project gets one file the AI reads first: what this project is, where the data lives, what must never be touched, which mistakes were made before. Mine grew from a few lines to a page per project, and every line in it is a correction I did not want to make twice.</p>
+<h2>3. Keep a mistakes file</h2>
+<p>When something goes wrong, write the lesson down in one line, in the place the AI will see next time. A rule like <em>Chrome sync wins from the local bookmarks file</em> came from 783 old bookmarks reappearing on top of 11 new ones. Written down once, it never happened again.</p>
+<h2>4. Rules as data, not buried in code</h2>
+<p>If the tool applies business rules — categories, booking accounts, visibility, naming — keep them in a readable file, one rule per line. The AI can write the code that applies them; you keep control of the rules themselves. Changing a rule should not need a new conversation with the AI.</p>
+<h2>5. Dry run by default</h2>
+<p>Anything that writes, moves, deletes or sends must first show what it <em>would</em> do. My photo pipeline handles more than 200,000 files; every step runs dry unless told otherwise, and 35 tests guard the rules. A dry run costs seconds. A wrong move on 200,000 files costs a weekend.</p>
+<h2>6. The AI does not mark its own homework</h2>
+<p>The AI will tell you it succeeded. Believe the count, not the message. After every run, check against reality: how many files arrived, how many rows are in the table, does the page actually show the image? A confident error looks exactly like a correct answer. One of my site builds reported success while 37 pages had broken images. Now the build checks its own output and fails when a link does not resolve.</p>
+<h2>7. Small steps, each one saved</h2>
+<p>Let the AI change one thing at a time, and save a version after each step that works. When step seven breaks something, you go back to step six, not to the beginning. This is old advice for programmers. It matters more now, because the AI changes more per step than a person would.</p>
+<h2>8. Look at what it made</h2>
+<p>Read the output yourself, at least the first time. Open the page, look at the image, scan the table. Several generated images on my own sites had garbled text or the wrong colours; they were only caught because looking at each one before use is a fixed step.</p>
+<h2>The pattern behind all eight</h2>
+<p>Each practice moves something out of the conversation and into a file or a check: the spec, the instructions, the mistakes, the rules, the counts. The conversation with the AI is where the speed comes from. The files and the checks are where the reliability comes from. You need both, and only the second one is yours to keep.</p>
+  <h2>Use cases in this article</h2><ul><li><a href="../use-cases/ocr-that-keeps-its-own-receipts.html">Document intake that keeps its own receipts</a></li><li><a href="../use-cases/media-pipeline-with-visibility-rules.html">A photo pipeline that knows what is private</a></li><li><a href="../use-cases/scan-to-the-right-folder.html">From phone scan to the right folder, named and indexed</a></li></ul>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/vibe-coding.html">Vibe Coding</a> <span class="muted">— Use AI to quickly build real things — especially nice interfaces on top of the metadata — to explore, prototype and give people a way in. Great for experimenting; just don&#x27;t ship the unspecified, ungated style to production.</span></li><li><a href="https://structurebeatsmagic.com/concepts/write-the-spec-not-the-prompt.html">Write the Spec, Not the Prompt</a> <span class="muted">— A prompt is a request you repeat. A spec is a contract the work is checked against — and it is the artefact that survives the session.</span></li><li><a href="https://structurebeatsmagic.com/concepts/claude-md-as-operating-system.html">CLAUDE.md as Operating System</a> <span class="muted">— Standing rules the AI reads before it acts — a layered OS for how the assistant behaves in your world.</span></li><li><a href="https://structurebeatsmagic.com/concepts/never-marks-its-own-homework.html">Never Marks Its Own Homework</a> <span class="muted">— The judge must be separate from the builder, and the score is the off-switch: a loop only stops when an independent evaluator says the rubric is met.</span></li><li><a href="https://structurebeatsmagic.com/concepts/the-mistakes-file.html">The Mistakes File</a> <span class="muted">— Same mistake twice = a new rule. Corrections you&#x27;d otherwise repeat forever get written into a file the AI reads every run.</span></li><li><a href="https://structurebeatsmagic.com/concepts/a-confident-error-has-no-tell.html">A Confident Error Has No Tell</a> <span class="muted">— A hallucination arrives in exactly the same shape as a correct answer. That is the whole problem — and why fluency is not evidence.</span></li><li><a href="https://structurebeatsmagic.com/concepts/hooks-over-hopes.html">Hooks Over Hopes</a> <span class="muted">— Every instruction to a model is a probability, not a promise. Rules that must always run belong in deterministic automation the model can&#x27;t skip.</span></li><li><a href="https://breakthroughmodeling.com/concepts/rules-as-data.html">Rules as Data</a> <span class="muted">— Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/vibe-coding.html">Vibe coding practices that hold</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html">&larr; All articles</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

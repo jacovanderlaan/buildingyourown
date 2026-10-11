@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>The mirror that went stale and nobody noticed — Building Your Own</title>
+<meta name="description" content="A copy of my CRM data looked fine for twenty months. It had stopped updating. A lesson in why every copy of data needs a date and an alarm." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">CRM, contacts and relationships</div> 
+  <h1>The mirror that went stale and nobody noticed</h1>
+  <p class="sub">A copy of my CRM data looked fine for twenty months. It had stopped updating. A lesson in why every copy of data needs a date and an alarm.</p>
+  <img class="hero-img" src="../assets/img/the-mirror-that-went-stale-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>—</dd></div><div><dt>Built with</dt><dd>a freshness check of a few lines</dd></div><div><dt>In numbers</dt><dd>frozen for 20 months · fixed in one day</dd></div></dl>
+  <h2>What happened</h2>
+<p>I kept a local copy of my CRM data so I could analyse it. It answered every question. It had also stopped updating twenty months earlier: three different import scripts existed, and none of them had an owner.</p>
+<h2>The fix</h2>
+<ul>
+<li>One importer, one owner.</li>
+<li>A <strong>freshness check</strong>: the import fails loudly when the copy is more than seven days old.</li>
+<li>After the fix the number of people <em>dropped</em> by half. That was correct — the old copy carried duplicates. Compare with the source, not with your previous state.</li>
+</ul>
+<h2>Why it matters for anything you build</h2>
+<p>Every copy you make — a spreadsheet export, a database, a dashboard — starts going stale the moment it is made. Give it a date and an alarm, or it will lie to you politely.</p>
+<h2>On a Build Day</h2>
+<p>Every build gets a freshness rule before it gets a second screen.</p>
+  <div class="callout"><p><strong>Try it on a Build Day:</strong> <a href="../samples/rules-that-catch-errors.html">Rules that catch errors before they reach a customer</a></p></div>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/silence-is-not-absence-of-failure.html">Silence Is Not Absence of Failure</a> <span class="muted">— No complaints does not mean no problems. It usually means people adapted to the errors and stopped mentioning them.</span></li><li><a href="https://structurebeatsmagic.com/concepts/uptime-is-not-correctness.html">Uptime Is Not Correctness</a> <span class="muted">— Monitoring proves the system ran. Observability for AI has to prove the answer was right — and those are different instruments.</span></li><li><a href="https://breakthroughmodeling.com/concepts/data-observability.html">Data Observability</a> <span class="muted">— Continuous visibility into the health of your data pipelines — freshness, volume, schema drift, distribution and quality — so problems surface on their own, at the boundary, in time to fix them.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/privacy-and-control.html">Privacy and control</a><a class="chip" href="../topics/proof-of-concept.html">From proof of concept to something you rely on</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

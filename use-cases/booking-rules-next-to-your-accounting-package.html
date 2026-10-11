@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Keep the accounting package, own the booking rules — Building Your Own</title>
+<meta name="description" content="The official books stay in the accounting package. The knowledge of *how* things are booked moves out of people&#x27;s heads into a readable rule file, and a mirror of the books makes them queryable." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Accounting and bank transactions</div> 
+  <h1>Keep the accounting package, own the booking rules</h1>
+  <p class="sub">The official books stay in the accounting package. The knowledge of <em>how</em> things are booked moves out of people&#x27;s heads into a readable rule file, and a mirror of the books makes them queryable.</p>
+  <img class="hero-img" src="../assets/img/booking-rules-next-to-your-accounting-package-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>nothing — works next to the accounting package (Snelstart)</dd></div><div><dt>Built with</dt><dd>YAML rules, Python, DuckDB, an MCP server for questions in plain language</dd></div><div><dt>In numbers</dt><dd>11,587 bookings · 155 ledger accounts · about 41 booking rules</dd></div></dl>
+  <h2>The situation</h2>
+<p>A small company's books live in an accounting package, and the rules for booking them live in the head of one person — the owner or the bookkeeper. Which bank line goes to which ledger account, with which VAT? When that person is away, nobody knows.</p>
+<h2>What I built</h2>
+<ul>
+<li>A <strong>rule file</strong>: match pattern → ledger account → VAT code. Around forty rules cover almost every recurring line.</li>
+<li>A <strong>mirror</strong> of the bookkeeping export in a local database, so I can ask questions the package makes hard: profit and loss per quarter, open invoices, revenue per customer.</li>
+<li>A small <strong>assistant connection</strong> (MCP) so I can ask those questions in plain language.</li>
+</ul>
+<p>The package stays the official record. Nothing is booked twice.</p>
+<h2>The structure underneath</h2>
+<p>Booking knowledge is data, not habit. A rule can be read, discussed with the accountant, versioned, and applied by a script or by an AI — the same rule every time.</p>
+<h2>What it taught me</h2>
+<p>Agree with your accountant which year is closed. A frozen year is never corrected by hand; corrections go through the next period. The rule file makes that discipline easy to keep.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring an export of one quarter of bank lines and your chart of accounts. Write the first ten rules together, then let the AI suggest the next ones — and check every suggestion against the rule format.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/rules-as-data.html">Rules as Data</a> <span class="muted">— Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model.</span></li><li><a href="https://structurebeatsmagic.com/concepts/rules-you-can-verify.html">Rules You Can Verify</a> <span class="muted">— &#x27;2-space indent&#x27; is a rule; &#x27;format code properly&#x27; is a wish. A rule the system can&#x27;t check is decoration.</span></li><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

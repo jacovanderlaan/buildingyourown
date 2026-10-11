@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Document intake that keeps its own receipts — Building Your Own</title>
+<meta name="description" content="Feeding thousands of documents into a document system, with a ledger that proves what arrived, avoids duplicates, and re-reads the badly recognised ones." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Document management</div> 
+  <h1>Document intake that keeps its own receipts</h1>
+  <p class="sub">Feeding thousands of documents into a document system, with a ledger that proves what arrived, avoids duplicates, and re-reads the badly recognised ones.</p>
+  <img class="hero-img" src="../assets/img/ocr-that-keeps-its-own-receipts-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>trusting a document system&#x27;s import blindly</dd></div><div><dt>Built with</dt><dd>open-source document system (Paperless-ngx) on a home server, Python, DuckDB, an OCR service</dd></div><div><dt>In numbers</dt><dd>15,455 PDFs pushed · 33% duplicates avoided · 8,509 of 8,630 re-read</dd></div></dl>
+  <h2>The situation</h2>
+<p>Document systems promise to make everything searchable. In practice imports fail silently, the same file goes in three times, and old receipts come out as gibberish.</p>
+<h2>What I built</h2>
+<ul>
+<li>An <strong>intake ledger</strong>: every file is identified by a fingerprint of its content (SHA-256). A document counts as arrived only after the system confirms it.</li>
+<li><strong>Duplicates never go in twice</strong> — a third of the files turned out to be copies.</li>
+<li>A <strong>re-read pipeline</strong>: badly recognised documents are rendered as images and read again by a better OCR service; the improved text is written back.</li>
+</ul>
+<h2>What went wrong</h2>
+<p>A faded restaurant receipt came out with the wrong name. The OCR service quietly reused the existing text layer of the PDF. Sending it <em>images</em> instead of the PDF fixed it — one of those details you only learn by checking.</p>
+<h2>The structure underneath</h2>
+<p>Never trust <em>exit code 0</em>. Count what arrived.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring fifty documents. Build the ledger first, the search second.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/never-marks-its-own-homework.html">Never Marks Its Own Homework</a> <span class="muted">— The judge must be separate from the builder, and the score is the off-switch: a loop only stops when an independent evaluator says the rubric is met.</span></li><li><a href="https://breakthroughmodeling.com/concepts/reality-check.html">Reality Check</a> <span class="muted">— Test the model and the plan against the real world — the actual data, deliveries and behavior — not against the assumption you started with.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/vibe-coding.html">Vibe coding practices that hold</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

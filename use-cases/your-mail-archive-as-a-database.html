@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Your mail archive as a database you own — Building Your Own</title>
+<meta name="description" content="Mail is the biggest record a small company has of its customers, suppliers and agreements — and it lives in someone else&#x27;s search box. A local, queryable copy turns it into data." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Email and inbox management</div> 
+  <h1>Your mail archive as a database you own</h1>
+  <p class="sub">Mail is the biggest record a small company has of its customers, suppliers and agreements — and it lives in someone else&#x27;s search box. A local, queryable copy turns it into data.</p>
+  <img class="hero-img" src="../assets/img/your-mail-archive-as-a-database-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>searching in the mail provider&#x27;s web interface</dd></div><div><dt>Built with</dt><dd>a local copy of the mailbox, Python, DuckDB</dd></div><div><dt>In numbers</dt><dd>hundreds of thousands of mails held locally · 465,416 mail interactions in the relationship score</dd></div></dl>
+  <h2>The situation</h2>
+<p>Who did we quote last spring? When did this supplier last change its terms? The answer is somewhere in the mailbox, and the mail provider's search box is the only way in.</p>
+<h2>What I built</h2>
+<p>A local copy of the mailbox, read into a database: sender, recipients, date, subject, and whether it was one-to-one or bulk mail. Content stays in the mail files; the database holds what is needed to count, link and find.</p>
+<h2>What it made possible</h2>
+<ul>
+<li>The <strong>relationship score</strong> on this site runs on it: 465,416 mail interactions, plus messages.</li>
+<li><strong>Order confirmations</strong> become a purchase history (in progress).</li>
+<li><strong>Sender decisions</strong> for the daily triage are made once and applied to the whole archive.</li>
+</ul>
+<h2>The structure underneath</h2>
+<p>The mail provider is a delivery service, not your archive. Own the copy; let the provider deliver.</p>
+<h2>Start on a Build Day</h2>
+<p>Export the headers of one month of your mail — sender, date, subject — and count who writes to you, and who you write to.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li><li><a href="https://structurebeatsmagic.com/concepts/email-intelligence.html">Email Intelligence</a> <span class="muted">— Classify every sender signal-vs-noise; turn an inbox into a managed source.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

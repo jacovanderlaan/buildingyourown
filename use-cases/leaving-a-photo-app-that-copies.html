@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Leaving an asset manager that copies everything — Building Your Own</title>
+<meta name="description" content="An asset manager that must copy every file into its own library doubles your storage and owns your tags. The way out: tags into files next to the photos, and viewers that only read." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Digital asset management</div> 
+  <h1>Leaving an asset manager that copies everything</h1>
+  <p class="sub">An asset manager that must copy every file into its own library doubles your storage and owns your tags. The way out: tags into files next to the photos, and viewers that only read.</p>
+  <img class="hero-img" src="../assets/img/leaving-a-photo-app-that-copies-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>a desktop asset manager (Eagle)</dd></div><div><dt>Built with</dt><dd>sidecar files, a self-hosted photo viewer (Immich) reading the files read-only</dd></div><div><dt>In numbers</dt><dd>1.1 TB library removed · 80,752 duplicated items in a second library</dd></div></dl>
+  <h2>The situation</h2>
+<p>Many digital asset managers import files into their own library. Your tags, ratings and folders live inside it. Leave the app, and you lose the work.</p>
+<h2>What I did</h2>
+<ul>
+<li>Exported every tag into a database and then into <strong>sidecar files</strong> next to the photos (275,223 images, 86,945 with tags).</li>
+<li>Removed the 1.1 TB library.</li>
+<li>Switched to a viewer that <strong>references</strong> the original folders read-only instead of copying them.</li>
+<li>When I change something in the viewer — delete, favourite, album — it is written back to the sidecar. The viewer proposes; the file decides.</li>
+</ul>
+<h2>The structure underneath</h2>
+<p>Choose tools that point at your files, not tools that swallow them. The same holds for documents, product images and brand assets in a company.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring a folder of product or project images. Define five tags, write them to sidecars, and generate a simple gallery from them.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li><li><a href="https://structurebeatsmagic.com/concepts/document-vault.html">Document Vault</a> <span class="muted">— Plain files in a deliberate shape that both you and AI can navigate.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/build-or-buy.html">Build, buy or rent</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>A purchase history from order confirmations — Building Your Own</title>
+<meta name="description" content="Every web shop sends an order confirmation. Read them all into one table and you have a purchase history across every shop — warranty dates included." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Email and inbox management</div> <span class="badge">in progress</span>
+  <h1>A purchase history from order confirmations</h1>
+  <p class="sub">Every web shop sends an order confirmation. Read them all into one table and you have a purchase history across every shop — warranty dates included.</p>
+  <img class="hero-img" src="../assets/img/purchase-history-from-order-mails-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>logging in to every web shop to find an old order</dd></div><div><dt>Built with</dt><dd>mail export, extraction script, DuckDB</dd></div><div><dt>In numbers</dt><dd>2,904 order mails from one large web shop · 2,519 from one retail chain</dd></div></dl>
+  <h2>The situation</h2>
+<p>Where did we buy that laptop, and is it still under warranty? The answer is in a confirmation mail from three years ago, in a web shop account nobody remembers the password for.</p>
+<h2>What I am building</h2>
+<p>A step that finds order confirmations in the mail archive, pulls out shop, date, items and amount, and writes them into one purchase table. The design is decided; extraction scripts exist and were tried on the largest senders.</p>
+<h2>Status</h2>
+<p><strong>In progress.</strong> Thousands of order mails are identified per shop; the full extraction and the screen are not built yet. It is on this site because the design choices — one table, every shop, the mail as source — are the interesting part.</p>
+<h2>The structure underneath</h2>
+<p>A purchase links to a product, a supplier, a warranty and a booking. Once it is a row, all four become questions you can answer.</p>
+<h2>Start on a Build Day</h2>
+<p>Search your mail for one shop's order confirmations. Let the AI extract date, items and amount from ten of them, and check every one.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/fail-fast.html">Fail Fast</a> <span class="muted">— Set experiments up to fail quickly and cheaply, read the signal honestly, and move on — don&#x27;t linger in something that, in the end, may not work.</span></li><li><a href="https://structurebeatsmagic.com/concepts/the-experiment-loop.html">The Experiment Loop</a> <span class="muted">— Play with a hypothesis: hypothesize → experiment → learn → decide. The mechanism that turns tinkering into a proven block.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/design-and-experiments.html">Design thinking and small experiments</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>One source, three publications: birthdays — Building Your Own</title>
+<meta name="description" content="A small case with a big principle: one file is the source, and the calendar, the contact list and a web page are publications generated from it." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">CRM, contacts and relationships</div> 
+  <h1>One source, three publications: birthdays</h1>
+  <p class="sub">A small case with a big principle: one file is the source, and the calendar, the contact list and a web page are publications generated from it.</p>
+  <img class="hero-img" src="../assets/img/one-source-many-publications-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>a birthday-reminder service and a calendar used as a database</dd></div><div><dt>Built with</dt><dd>one YAML file, three small publishing scripts</dd></div><div><dt>In numbers</dt><dd>130 people merged from 5 sources</dd></div></dl>
+  <h2>The situation</h2>
+<p>Birthdays were spread over five places: a reminder service, a phone, a calendar, a family list and memory. Seventeen of them existed in only one place.</p>
+<h2>What I built</h2>
+<p>One YAML file is the only place where a birthday is written. Scripts publish it to the contact list (which fills the phone's birthday calendar), to a calendar file and to a page. Every script runs dry first, only updates, and never silently overwrites a conflict.</p>
+<h2>The structure underneath</h2>
+<p>Publishing is one-way. Fix the source, republish everywhere. The same pattern works for price lists, product data, opening hours and staff lists.</p>
+<h2>Start on a Build Day</h2>
+<p>Pick one list your company keeps in three places. Make one file the source and generate the other two.</p>
+  <div class="callout"><p><strong>Try it on a Build Day:</strong> <a href="../samples/one-list-three-places.html">One list, three places</a></p></div>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/one-way-publishing.html">One-Way Publishing</a> <span class="muted">— You don&#x27;t sync systems — you publish from one. Sync is where rot starts.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>A relationship score from your own mail and messages — Building Your Own</title>
+<meta name="description" content="A CRM&#x27;s most valuable feature — who you are losing touch with — rebuilt from data you already own, with the same published factors and your own weights." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">CRM, contacts and relationships</div> 
+  <h1>A relationship score from your own mail and messages</h1>
+  <p class="sub">A CRM&#x27;s most valuable feature — who you are losing touch with — rebuilt from data you already own, with the same published factors and your own weights.</p>
+  <img class="hero-img" src="../assets/img/relationship-score-from-your-own-data-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>the scoring inside a rented CRM (Cloze)</dd></div><div><dt>Built with</dt><dd>Python, DuckDB, your own mail and message exports</dd></div><div><dt>In numbers</dt><dd>493,492 interactions · 223 scored relationships</dd></div></dl>
+  <h2>The situation</h2>
+<p>CRMs sell one thing above all: they tell you which relationships are going cold. To do that they need all your mail, all your messages and all your calendar — in their cloud.</p>
+<h2>What I built</h2>
+<p>A script that reads my own mail, message and calendar history into one table of interactions, and scores each relationship on six factors that the CRM vendor itself publishes: how long since contact, how often, how responsive, how personal, how fresh, how balanced. The weights are mine.</p>
+<h2>The structure underneath</h2>
+<p>The score is a formula over a table, not a secret. Change a weight, rerun, compare.</p>
+<h2>The surprise</h2>
+<p>The <strong>privacy factor</strong> — one-to-one mail versus bulk mail — separates real relationships from newsletters without any blocklist. One job board alone had sent almost thirty thousand mails; it drops out on its own.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring an export of your contacts and a sample of your sent mail headers (no content needed). Build the interaction table and a first score with two factors.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li><li><a href="https://structurebeatsmagic.com/concepts/rent-the-ai-own-the-structure.html">Rent the AI; Own the Structure</a> <span class="muted">— Models are swappable commodities; your structure is the durable asset.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/build-or-buy.html">Build, buy or rent</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

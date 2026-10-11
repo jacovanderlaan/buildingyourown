@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Every booking linked to its scan — Building Your Own</title>
+<meta name="description" content="Scans carry date, vendor and amount in a small metadata file; bookings come from the accounting export. A match on date and amount links them, and two short lists show what is missing on either side." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="18" stroke-linejoin="round"><rect x="20" y="130" width="160" height="44" rx="4"/><rect x="46" y="78" width="108" height="44" rx="4"/></g><rect x="80" y="14" width="40" height="40" fill="#b88a1b" transform="rotate(45 100 34)"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main">
+      <a href="../use-cases/index.html" class="on">Use cases</a>
+      <a href="../samples/index.html">Samples</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../concepts/index.html">Concepts</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="../topics/index.html">Topics</a>
+      <a href="../photos/index.html">Photos</a>
+      <a class="cta" href="../index.html#register">Register interest</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Accounting and bank transactions</div> <span class="badge">in progress</span>
+  <h1>Every booking linked to its scan</h1>
+  <p class="sub">Scans carry date, vendor and amount in a small metadata file; bookings come from the accounting export. A match on date and amount links them, and two short lists show what is missing on either side.</p>
+  <img class="hero-img" src="../assets/img/linking-scans-to-bookings-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>searching for the receipt when the accountant asks</dd></div><div><dt>Built with</dt><dd>day folders with YAML sidecars, a bookkeeping export mirrored in DuckDB, a matching script</dd></div><div><dt>In numbers</dt><dd>11,587 bookings mirrored · 4,289 receipts with sidecars</dd></div></dl>
+  <h2>The situation</h2>
+<p>At year end, or when the accountant asks, someone hunts for the receipt behind a booking. Or finds a receipt and cannot tell whether it was ever booked.</p>
+<h2>What I built</h2>
+<ul>
+<li>Every scan lives in the folder of its date, with a sidecar holding <strong>date, vendor, amount and category</strong>.</li>
+<li>The bookkeeping export is mirrored in a local database: date, ledger account, description, amount.</li>
+<li>A matching step joins the two on <strong>date and amount</strong>, with the vendor name as a tie-breaker, and writes the link into the sidecar.</li>
+<li>Two lists come out: <strong>bookings without a scan</strong>, and <strong>scans without a booking</strong>. Those lists are the to-do, not the thousands that matched.</li>
+</ul>
+<h2>Status</h2>
+<p>Day folders, sidecars and the bookkeeping mirror are built and in daily use. The matching runs as a step, not yet as a screen; the bookkeeping package itself stays the official record.</p>
+<h2>What I learned on the way</h2>
+<p>Check the instrument before the result. A field that says whether a booking has an attachment came out <em>yes</em> for every one of 11,587 bookings — which is not believable, so the field is not used until it is understood. A number that looks perfect is the first one to distrust.</p>
+<h2>The structure underneath</h2>
+<p>A link is data. Once the scan knows its booking and the booking knows its scan, an audit question becomes a lookup.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring one month of bookings (an export) and the scans of that month. Match them on date and amount, and look at what is left on both lists.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/the-calendar-is-the-spine.html">The Calendar Is the Spine</a> <span class="muted">— One time-axis is the backbone of a second brain — everything dated hangs off it.</span></li><li><a href="https://breakthroughmodeling.com/concepts/reality-check.html">Reality Check</a> <span class="muted">— Test the model and the plan against the real world — the actual data, deliveries and behavior — not against the assumption you started with.</span></li><li><a href="https://structurebeatsmagic.com/concepts/rules-you-can-verify.html">Rules You Can Verify</a> <span class="muted">— &#x27;2-space indent&#x27; is a rule; &#x27;format code properly&#x27; is a wish. A rule the system can&#x27;t check is decoration.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>
