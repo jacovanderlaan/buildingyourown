@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>A data model in an afternoon, from a proven pattern — Building Your Own</title>
+<meta name="description" content="Parties, products, orders, agreements, locations, accounts and events have been modelled well for decades. Start from those patterns, keep what you need, add your own rules, and generate the database from it." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu"><a href="../index.html#about">From bank to builder</a><a href="../photos/index.html">Photos</a></span></span><a class="cta" href="../index.html#register">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Data models and app building blocks</div> 
+  <h1>A data model in an afternoon, from a proven pattern</h1>
+  <p class="sub">Parties, products, orders, agreements, locations, accounts and events have been modelled well for decades. Start from those patterns, keep what you need, add your own rules, and generate the database from it.</p>
+  <img class="hero-img" src="../assets/img/a-data-model-from-a-proven-pattern-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>a blank page — or a heavy modeling tool you use a fraction of</dd></div><div><dt>Built with</dt><dd>industry patterns (Universal Data Models) as YAML templates, a generator, the MDDE metadata model</dd></div><div><dt>In numbers</dt><dd>7 core domains · a metadata model of 268 tables in 16 subject areas · 44 tests on the library</dd></div></dl>
+  <h2>The situation</h2>
+<p>Every company thinks its data is unique. It mostly is not. Customers and suppliers are parties. Quotes and contracts are agreements. Projects, tickets and tasks are work efforts. These patterns were worked out decades ago — most famously in Len Silverston's <em>Universal Data Models</em> — and most small companies still start from an empty spreadsheet.</p>
+<h2>What I built</h2>
+<ul>
+<li>A <strong>library of industry patterns as data</strong>: seven core domains (party, product, order, agreement, location, account, event), each as a readable template rather than a diagram in a book.</li>
+<li>My <strong>additions to every pattern</strong>: which modeling style fits (a plain normalised model, a star schema or a Data Vault), which layer it belongs in, and its business and data-quality rules. The same pattern serves three architectures.</li>
+<li>A <strong>generator</strong> that takes a domain, applies naming and options, and writes entities, attributes and relationships into one metadata model — from which the database, documentation and diagrams are generated.</li>
+<li>An <strong>AI step</strong> that reads existing tables and suggests which pattern they match, and which attributes are missing.</li>
+</ul>
+<h2>The structure underneath</h2>
+<p>The pattern carries the experience; the rules carry your business. You do not invent a customer model — you choose what you leave out.</p>
+<h2>Honest status</h2>
+<p>The library and generator are built and tested; the set of ready templates is still small, and the industry extensions are designed but not all filled in. My own CRM replacement already runs on one of these patterns: the work effort, as one recursive <em>activity</em>.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring the three lists your business runs on (customers, orders, projects). We map them to the proven patterns, strip what you do not need, and generate a small database you can fill the same day.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/proven-patterns.html">Proven Patterns</a> <span class="muted">— Proven shapes you reach for instead of inventing — a pattern captures a repeatable solution (Data Vault, dimensional, temporal) so you compose from known-good parts.</span></li><li><a href="https://breakthroughmodeling.com/concepts/do-not-reinvent-the-wheel.html">Do Not Reinvent the Wheel</a> <span class="muted">— The new way of modeling stands on the shoulders of giants — distil the essentials from decades of data-modeling work and keep what works, rather than starting from scratch.</span></li><li><a href="https://breakthroughmodeling.com/concepts/metadata-first.html">Metadata First</a> <span class="muted">— Metadata is the material Breakthrough Modeling is built from — structure, logic and meaning captured as data, so the platform and the AI can both read and run it.</span></li><li><a href="https://breakthroughmodeling.com/concepts/deliberate-simplicity.html">Deliberate Simplicity</a> <span class="muted">— Make each part as plain as it can be without losing what matters — reuse only the fraction you actually need, and strip the rest.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/data-models.html">Building your own data models</a><a class="chip" href="../topics/build-or-buy.html">Build, buy or rent</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

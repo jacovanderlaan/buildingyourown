@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Incident management that turns every failure into a rule — Building Your Own</title>
+<meta name="description" content="Every disruption — a failed import, a broken page, a dispute with a supplier — becomes a small file with an owner, a status and a lesson. The lesson becomes a rule, so the same failure does not come back." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu"><a href="../index.html#about">From bank to builder</a><a href="../photos/index.html">Photos</a></span></span><a class="cta" href="../index.html#register">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">The rest of the business OS</div> 
+  <h1>Incident management that turns every failure into a rule</h1>
+  <p class="sub">Every disruption — a failed import, a broken page, a dispute with a supplier — becomes a small file with an owner, a status and a lesson. The lesson becomes a rule, so the same failure does not come back.</p>
+  <img class="hero-img" src="../assets/img/incident-management-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>tickets in someone&#x27;s mailbox, or nothing at all</dd></div><div><dt>Built with</dt><dd>one markdown file per incident with fixed fields, a control table, a dashboard and cockpit screen</dd></div><div><dt>In numbers</dt><dd>51 incidents tracked · 36 open, 15 closed</dd></div></dl>
+  <h2>The situation</h2>
+<p>In a small company, things go wrong quietly. An export fails, a page breaks, a supplier delivers late. Someone fixes it, nobody writes it down, and three months later it happens again.</p>
+<h2>What I built</h2>
+<ul>
+<li><strong>One file per incident</strong>, with fixed fields: kind (defect, service, dispute), status, severity, owner, dates, and the parties involved. The body has the situation, a timeline, the fix and the lesson.</li>
+<li>A <strong>control table</strong> that collects incidents together with actions and ideas, so open incidents show up on the same dashboard and in the same cockpit as everything else.</li>
+<li>Bugs found by automated checks are turned into incidents automatically.</li>
+</ul>
+<h2>Three real ones</h2>
+<ul>
+<li><strong>A generator that erased work.</strong> A script rewrote 1,399 weekly notes and wiped 24 sections written by hand. It had a protection — which judged a section before removing a placeholder comment. Lesson: base safety on a measurement, not on a report; a half-working protection is worse than none.</li>
+<li><strong>A backup that read everything again.</strong> A cold backup re-read 833 GiB and a million files in four hours instead of minutes, because two snapshots spelled the machine name differently. No data lost — but measure which convention is the norm before you fix the outlier.</li>
+<li><strong>A blank app.</strong> One line used a value before it was defined, and the whole single-page app went white — three times. A syntax check does not catch it; a small runtime test does.</li>
+</ul>
+<h2>What the data says</h2>
+<p>The status field itself turned out to be the weak spot: <em>fixed</em>, <em>resolved</em>, <em>closed</em> and a few free-text variants all mean roughly the same. An incident system needs its own rules too.</p>
+<h2>The structure underneath</h2>
+<p>An incident is data, not a story. Once it has fields, you can count, sort and see patterns — and every fix can become a rule or a check.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring the last five things that went wrong. Give them the same five fields, and write one rule per incident that would have caught it.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/incident-modeling.html">Incident Modeling</a> <span class="muted">— Model delivery incidents as data, not loose tickets — a late feed, a failed quality check, a broken schema becomes a tracked, owned, queryable object in the model itself.</span></li><li><a href="https://structurebeatsmagic.com/concepts/the-mistakes-file.html">The Mistakes File</a> <span class="muted">— Same mistake twice = a new rule. Corrections you&#x27;d otherwise repeat forever get written into a file the AI reads every run.</span></li><li><a href="https://structurebeatsmagic.com/concepts/escalate-by-exception.html">Escalate by Exception</a> <span class="muted">— Route the easy work to the cheap path and reserve the expensive one for what actually needs it. Power by exception, not by default.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/privacy-and-control.html">Privacy and control</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

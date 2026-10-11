@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Building blocks that make the next app quick — Building Your Own</title>
+<meta name="description" content="My own system runs on a small set of reusable pieces — list, table, cards, timeline, board, document viewer, filters, search and a cockpit pattern. A new screen is mostly configuration." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu"><a href="../index.html#about">From bank to builder</a><a href="../photos/index.html">Photos</a></span></span><a class="cta" href="../index.html#register">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Data models and app building blocks</div> 
+  <h1>Building blocks that make the next app quick</h1>
+  <p class="sub">My own system runs on a small set of reusable pieces — list, table, cards, timeline, board, document viewer, filters, search and a cockpit pattern. A new screen is mostly configuration.</p>
+  <img class="hero-img" src="../assets/img/building-blocks-for-quick-apps-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <dl class="facts"><div><dt>Replaces</dt><dd>starting every app from scratch</dd></div><div><dt>Built with</dt><dd>one Python server without frameworks, one HTML file, shared components, menus as configuration</dd></div><div><dt>In numbers</dt><dd>45 cockpits · 209 render functions · 156 areas from configuration · 13 apps sharing one shell</dd></div></dl>
+  <h2>The situation</h2>
+<p>When people build their first app with AI, they build everything: the menu, the list, the filter, the detail page. The second app repeats it, slightly differently. By the fifth app there are five versions of the same list, each with its own bug.</p>
+<h2>What I built</h2>
+<p>One web app over my whole personal system, built almost entirely with AI, around a fixed set of building blocks:</p>
+<ul>
+<li><strong>Views:</strong> list, table, cards, timeline, board and a document viewer — the same components for receipts, people, trips or incidents.</li>
+<li><strong>Filters and facets</strong> by entity, period and status, and a <strong>global search</strong> across documents, notes, photos, mail and calendar.</li>
+<li><strong>A cockpit pattern:</strong> one entity with its related items, notes and actions on one screen. There are 45 of them, from accounts and agreements to meetings and receipts.</li>
+<li><strong>Saved views as queries</strong>, in the query language of a reading app I like.</li>
+<li><strong>Menus and screens as configuration:</strong> 21 menus and 156 areas are rows in a table, loaded from a file, not code.</li>
+<li><strong>A shared shell</strong> used by 13 small apps, so they all have the same menu and look.</li>
+</ul>
+<h2>How a new screen is added</h2>
+<p>Add an area to the configuration — label, entity, which view, which filter — and, if needed, one import script for the data. The building blocks do the rest.</p>
+<h2>What I learned on the way</h2>
+<p>Copies breed bugs. Three copies of the same path logic gave three different bugs; most screens handled the database connection their own way until one shared module replaced them. Building blocks are not a nice-to-have — they are how a system built by AI stays correct.</p>
+<h2>Honest note</h2>
+<p>It is built for one person on a private network, without a login of its own. A company version starts with access control.</p>
+<h2>Start on a Build Day</h2>
+<p>Bring two lists you want to see. We build one list view and one card view, and then add the second list as configuration only.</p>
+  
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/decompose-and-compose.html">Decompose and Compose</a> <span class="muted">— Break the complex whole into small, self-contained parts you can name, model and check one at a time — the core move of thinking in structures.</span></li><li><a href="https://breakthroughmodeling.com/concepts/reusable-skills.html">Reusable Skills</a> <span class="muted">— Reusable, AI-readable units of behavior — a skill packages how to do one thing well, versioned and callable, so people and AI apply it the same way every time.</span></li><li><a href="https://breakthroughmodeling.com/concepts/compounding-efficiency.html">Compounding Efficiency</a> <span class="muted">— Spend time, money and attention where they compound — cut the meetings, the licensed bloat and the unstructured chat that add nothing, and put the resource into structure that pays back.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/building-blocks.html">Components and building blocks</a><a class="chip" href="../topics/vibe-coding.html">Vibe coding practices that hold</a></div>
+  <p><a href="index.html">&larr; All use cases</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../photos/index.html">Photos</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>
