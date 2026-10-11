@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <title>Building Your Own</title>
-  <!-- Three stacked blocks (the structure) with a gold diamond placed on top (what you build on it). -->
-  <rect width="200" height="200" rx="44" fill="#0f172a"/>
-  <g fill="none" stroke="#2563eb" stroke-width="14" stroke-linejoin="round">
-    <rect x="40" y="128" width="120" height="34" rx="4"/>
-    <rect x="58" y="88" width="84" height="34" rx="4"/>
-  </g>
-  <rect x="84" y="34" width="32" height="32" fill="#b88a1b" transform="rotate(45 100 50)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>Building Your Own</title><rect width="200" height="200" rx="44" fill="#0f172a"/><g transform="translate(20 18) scale(.8)"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></g></svg>
