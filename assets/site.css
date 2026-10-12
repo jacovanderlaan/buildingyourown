@@ -866,3 +866,10 @@ section.block.about-rest{padding-top:8px}
 .photo-band{margin:8px 0 0}
 .photo-band img{display:block;width:100%;max-width:none;height:clamp(130px,21vw,300px);object-fit:cover;border-radius:0}
 .photo-band + section.wrap{padding-top:32px}
+/* Short grids (1-2 tiles) become full-width horizontal tiles instead of leaving an empty third, so their text reaches the first screen; family pages get a slim band so the tiles reach the first screen (12 Oct 2026). */
+.tiles:has(> .tile:last-child:nth-child(-n+2)){grid-template-columns:1fr}
+.tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile{flex-direction:row;align-items:stretch}
+.tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile img{width:38%;flex:none;border-bottom:0;border-right:1px solid var(--line);object-fit:cover}
+.tiles:has(> .tile:last-child:nth-child(-n+2)) .tile-body{justify-content:center;padding:20px 24px}
+@media(max-width:640px){.tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile{flex-direction:column}.tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile img{width:100%;border-right:0;border-bottom:1px solid var(--line)}}
+.photo-band.slim img{height:clamp(90px,11vw,160px)}
