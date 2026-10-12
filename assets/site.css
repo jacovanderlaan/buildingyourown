@@ -860,3 +860,5 @@ section.block.about-rest{padding-top:8px}
 .about-top .prose>p:first-child{margin-top:0}
 /* concept cards: small hero from the concept's own library */
 .concept-thumb{display:block;width:calc(100% + 32px);max-width:none;height:auto;aspect-ratio:3/2;object-fit:cover;margin:-14px -16px 8px;border-radius:12px 12px 0 0;border-bottom:1px solid var(--line);background:#fff}
+.about-long blockquote{clear:both;margin:1rem 0 1.4rem}
+.about-long blockquote p:last-child{color:var(--fg);font-size:.92rem}
