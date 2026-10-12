@@ -3,3 +3,5 @@
 _src/
 **/IMAGE-CATALOG.md
 **/briefs.md
+# family listing heroes, synced by sync_tokens.py but not used on this site
+assets/listing-*.png
