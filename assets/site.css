@@ -865,3 +865,4 @@ section.block.about-rest{padding-top:8px}
 /* photo band under a page header (own photos, as on structurebeatsmagic.com), 12 Oct 2026 */
 .photo-band{margin:8px 0 0}
 .photo-band img{display:block;width:100%;max-width:none;height:clamp(130px,21vw,300px);object-fit:cover;border-radius:0}
+.photo-band + section.wrap{padding-top:32px}
