@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Generate the year in review from your own files — Building Your Own</title>
+<meta name="description" content="A year of calendar entries and a photo folder in, a month-by-month review page out — including a list of what is missing." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu"><a href="../index.html#about">From bank to builder</a><a href="../photos/index.html">Photos</a></span></span><a class="cta" href="../index.html#register">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Sample &middot; intermediate</div>
+  <h1>Generate the year in review from your own files</h1>
+  <p class="sub">A year of calendar entries and a photo folder in, a month-by-month review page out — including a list of what is missing.</p>
+  
+  <p><strong>Based on:</strong> <a href="../use-cases/one-cockpit-instead-of-fifteen-apps.html">One cockpit instead of fifteen apps</a> · <strong>Level:</strong> intermediate · <strong>Time:</strong> 45 minutes live, or one Build Day afternoon</p>
+<p>An annual review fails on its first step: digging up what happened. The data to do that already exists — in your calendar, your photos and your invoices. This sample turns that digging into one script you can run every December.</p>
+<h2>Two versions</h2>
+<ul>
+<li><strong>Personal:</strong> calendar export + photo folder → trips, busy months, places, people you met.</li>
+<li><strong>Business:</strong> calendar export + invoice list + project list → customers per month, revenue per quarter, projects started and finished. This is the <em>annual business review</em> most small companies skip because nobody has the evening to compile it.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Export one year of calendar events (<code>.ics</code> or CSV). Bring a photo folder or an invoice list as the second source.</li>
+<li>Decide which fields count: <em>a trip has a start and an end date</em>, <em>an invoice has a customer and a date</em>. Write these down as three or four rules before any code exists.</li>
+<li>Ask the AI to build a small script that reads both sources and writes one page: totals for the year, then a table with one row per month.</li>
+<li>Add a section <strong>What is missing</strong>: months with far fewer entries than the median, items without a date. This list is the most useful output.</li>
+<li>Leave two sections empty for a human to write: <em>what I am grateful for or proud of</em>, and <em>what I would not do again</em>. The script must keep these when you run it again.</li>
+</ol>
+<h2>What you take home</h2>
+<p>A page you can regenerate every year, the field rules written down, and an honest list of where your own records are thin. In Jaco's own run, the missing-list showed that the photos of a 23-day trip had never reached the photo index, and that 10 of the 11 trip notes for 2024 had no dates.</p>
+  <div class="chips"><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/design-and-experiments.html">Design thinking and small experiments</a></div>
+  <p><a href="index.html">&larr; All samples</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../photos/index.html">Photos</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

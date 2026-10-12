@@ -815,3 +815,18 @@ a.card:hover{text-decoration:none;border-color:var(--accent)}
 .tl-kind{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:3px}
 @media(max-width:700px){.timeline li{grid-template-columns:1fr}}
 .timeline .tl-kind{background:none;border:0}
+
+/* questionnaire */
+.qform{margin-top:8px}
+.qsec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:8px 22px 18px;margin:18px 0}
+.qsec h2{font-size:1.2rem;margin:14px 0 6px}
+.q{margin:14px 0;border:0;padding:0}
+.q > label,.q legend{display:block;font-weight:600;margin-bottom:6px;font-size:.96rem}
+.q input[type=text],.q input[type=email],.q input[type=tel],.q textarea,.q select{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg)}
+.q textarea{resize:vertical}
+.q input:focus,.q textarea:focus,.q select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.opt{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:6px 0;cursor:pointer}
+.opt input{margin-top:5px}
+.consent{font-size:.95rem}
+.req{color:var(--gold)}
+.qform .btn[disabled]{opacity:.55;cursor:not-allowed}
