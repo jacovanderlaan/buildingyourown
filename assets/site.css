@@ -846,3 +846,15 @@ a.card:hover{text-decoration:none;border-color:var(--accent)}
 
 /* hybrid hero: frame only; the .hybrid rules come from the family token block */
 .hero .hybrid{margin:36px 0 0;border:1px solid var(--line);border-radius:14px}
+/* about page: photos beside the long story, alternating sides */
+.about-long{max-width:880px}
+.about-long::after{content:"";display:block;clear:both}
+.about-long h2{clear:both}
+.about-photo{width:44%;margin-top:6px}
+.about-photo.right{float:right;margin-left:24px}
+.about-photo.left{float:left;margin-right:24px}
+@media(max-width:700px){.about-photo,.about-photo.right,.about-photo.left{float:none;width:100%;margin:0 0 16px}}
+section.block.about-top{padding-top:8px}
+section.block.about-rest{padding-top:8px}
+.about-top .prose,.about-long{padding-top:0}
+.about-top .prose>p:first-child{margin-top:0}
