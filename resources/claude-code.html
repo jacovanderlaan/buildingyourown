@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Claude Code — Building Your Own</title>
+<meta name="description" content="The AI coding tool most of the use cases on this site were built with. Strong when it gets a spec, rules and a way to check its own work." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261012d" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Tools and sources · tool</div>
+  <h1>Claude Code</h1>
+  <p class="sub">The AI coding tool most of the use cases on this site were built with. Strong when it gets a spec, rules and a way to check its own work.</p>
+  <p class="muted">Anthropic</p>
+  <img class="hero-img" src="../assets/img/claude-code-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <h2>What it is</h2>
+<p>Claude Code is Anthropic's coding agent. It runs in the terminal, in your editor or in the desktop app, reads the files in your project, writes and runs code, and checks the result. You describe what a tool must do; it does most of the typing.</p>
+<h2>How I use it</h2>
+<p>Almost every use case on this site was built with it. What makes the difference is not the prompt but what surrounds it:</p>
+<ul>
+<li><strong>A <code>CLAUDE.md</code> file</strong> in every project, with the conventions, the folder layout and the lessons from earlier mistakes. It loads at the start of every session, so the agent does not start from zero.</li>
+<li><strong>Rules that load by path</strong>, so a warning about one folder only appears when that folder is touched.</li>
+<li><strong>Hooks</strong> that run a check automatically, instead of hoping the agent remembers to.</li>
+<li><strong>Skills</strong> for work that repeats, such as building a site or importing a data export.</li>
+</ul>
+<h2>On a Build Day</h2>
+<p>You work in your own account, on your own example data. The day teaches the habits that keep the speed and drop the hangover: a short spec before the first line of code, a test the tool must pass, and one file where every correction is written down.</p>
+<h2>Watch out</h2>
+<p>It is very good at sounding right. Ask it to prove a result (count the rows, open the page) instead of accepting "done".</p>
+  <h2>Links</h2><ul class="concept-links"><li><a href="https://claude.com/product/claude-code">Claude Code</a></li><li><a href="https://code.claude.com/docs">Documentation</a></li></ul>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/claude-md-as-operating-system.html">CLAUDE.md as Operating System</a> <span class="muted">— Standing rules the AI reads before it acts — a layered OS for how the assistant behaves in your world.</span></li><li><a href="https://structurebeatsmagic.com/concepts/write-the-spec-not-the-prompt.html">Write the Spec, Not the Prompt</a> <span class="muted">— A prompt is a request you repeat. A spec is a contract the work is checked against — and it is the artefact that survives the session.</span></li><li><a href="https://structurebeatsmagic.com/concepts/hooks-over-hopes.html">Hooks Over Hopes</a> <span class="muted">— Every instruction to a model is a probability, not a promise. Rules that must always run belong in deterministic automation the model can&#x27;t skip.</span></li><li><a href="https://structurebeatsmagic.com/concepts/the-mistakes-file.html">The Mistakes File</a> <span class="muted">— Same mistake twice = a new rule. Corrections you&#x27;d otherwise repeat forever get written into a file the AI reads every run.</span></li><li><a href="https://breakthroughmodeling.com/concepts/reusable-skills.html">Reusable Skills</a> <span class="muted">— Reusable, AI-readable units of behavior — a skill packages how to do one thing well, versioned and callable, so people and AI apply it the same way every time.</span></li><li><a href="https://structurebeatsmagic.com/concepts/evals-are-the-release-gate.html">Evals Are the Release Gate</a> <span class="muted">— An eval suite that doesn&#x27;t block a release isn&#x27;t a gate, it&#x27;s a report. No evals, no ship.</span></li></ul>
+  <h2>Used in these use cases</h2><div class="tiles"><a class="tile" href="../use-cases/one-cockpit-instead-of-fifteen-apps.html"><img src="../assets/img/one-cockpit-instead-of-fifteen-apps-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>One cockpit instead of fifteen apps</strong><span>Actions, ideas, incidents, finance, documents and photos — all as files with status fields, all readable in one app on the phone.</span></span></a><a class="tile" href="../use-cases/building-blocks-for-quick-apps.html"><img src="../assets/img/building-blocks-for-quick-apps-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Building blocks that make the next app quick</strong><span>My own system runs on a small set of reusable pieces — list, table, cards, timeline, board, document viewer, filters, search and a cockpit pattern. A new screen is mostly configuration.</span></span></a><a class="tile" href="../use-cases/household-ledger.html"><img src="../assets/img/household-ledger-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A household and business ledger you own</strong><span>Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The finance app becomes a view, not a vault.</span></span></a><a class="tile" href="../use-cases/your-mail-archive-as-a-database.html"><img src="../assets/img/your-mail-archive-as-a-database-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Your mail archive as a database you own</strong><span>Mail is the biggest record a small company has of its customers, suppliers and agreements — and it lives in someone else&#x27;s search box. A local, queryable copy turns it into data.</span></span></a></div>
+  <h2>Related articles</h2><ul class="concept-links"><li><a href="../articles/vibe-coding-without-the-hangover.html">Vibe Coding Without the Hangover</a></li><li><a href="https://structurebeatsmagic.com/articles/stop-prompting-start-directing.html">Stop Prompting, Start Directing: Claude for Your Vault</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/build-your-first-skill.html">Build Your First Skill: The Anatomy, Start to Finish</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/prompts-skills-plugins-mcp-which-tool-when.html">Prompts, Skills, Plugins, MCP — Which Tool, When</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/skills-are-the-unit-that-compounds.html">Skills Are the Unit That Compounds</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/red-team-your-ai-plan.html">Red-Team Your Own AI (Before It Just Flatters You)</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/the-image-integrity-gate.html">The Image-Integrity Gate: I Caught My Own Site Faking It</a> <span class="muted">— Structure Beats Magic</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/vibe-coding.html">Vibe coding practices that hold</a></div>
+  <p><a href="index.html#sources">&larr; All tools and sources</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

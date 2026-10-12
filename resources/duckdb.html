@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>DuckDB — Building Your Own</title>
+<meta name="description" content="A database in a single file, no server. Ideal as a rebuildable mirror of files you own." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261012d" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow">Tools and sources · tool</div>
+  <h1>DuckDB</h1>
+  <p class="sub">A database in a single file, no server. Ideal as a rebuildable mirror of files you own.</p>
+  <p class="muted">DuckDB Foundation</p>
+  <img class="hero-img" src="../assets/img/duckdb-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <h2>What it is</h2>
+<p>DuckDB is an analytical database that runs inside your program, with no server to install or maintain. A database is one file you can copy. It reads CSV, Excel, JSON and Parquet directly, and it speaks ordinary SQL.</p>
+<h2>How I use it</h2>
+<p>My rule is <em>files first, database second</em>. The truth lives in plain files I own: exports, notes, sidecars next to scans. DuckDB is a mirror of those files that I can delete and rebuild at any time, and the apps read the mirror. Because nothing is typed into the database by hand, nothing is lost when it is rebuilt.</p>
+<p>My own cockpit runs on about 49 of these database files, one per domain: bookkeeping, mail, contacts, documents, photos.</p>
+<h2>On a Build Day</h2>
+<p>DuckDB is the easiest way to turn a spreadsheet or an export from your own software into something you can query and build on, on your laptop, without asking IT for a server.</p>
+<h2>Watch out</h2>
+<p>It is built for analysis, not for many people writing at the same time. For a shared app with many users, keep the files or a real server database as the source.</p>
+  <h2>Links</h2><ul class="concept-links"><li><a href="https://duckdb.org/">DuckDB</a></li><li><a href="https://duckdb.org/docs/">Documentation</a></li></ul>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/deliberate-simplicity.html">Deliberate Simplicity</a> <span class="muted">— Make each part as plain as it can be without losing what matters — reuse only the fraction you actually need, and strip the rest.</span></li><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li><li><a href="https://structurebeatsmagic.com/concepts/deterministic-by-design.html">Deterministic by Design</a> <span class="muted">— Deliberate is whether the structure was chosen; deterministic is whether the output repeats. A toy is neither on the second try.</span></li><li><a href="https://structurebeatsmagic.com/concepts/rules-you-can-verify.html">Rules You Can Verify</a> <span class="muted">— &#x27;2-space indent&#x27; is a rule; &#x27;format code properly&#x27; is a wish. A rule the system can&#x27;t check is decoration.</span></li></ul>
+  <h2>Used in these use cases</h2><div class="tiles"><a class="tile" href="../use-cases/household-ledger.html"><img src="../assets/img/household-ledger-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A household and business ledger you own</strong><span>Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The finance app becomes a view, not a vault.</span></span></a><a class="tile" href="../use-cases/your-mail-archive-as-a-database.html"><img src="../assets/img/your-mail-archive-as-a-database-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Your mail archive as a database you own</strong><span>Mail is the biggest record a small company has of its customers, suppliers and agreements — and it lives in someone else&#x27;s search box. A local, queryable copy turns it into data.</span></span></a><a class="tile" href="../use-cases/purchase-history-from-order-mails.html"><img src="../assets/img/purchase-history-from-order-mails-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A purchase history from order confirmations</strong><span>Every web shop sends an order confirmation. Read them all into one table and you have a purchase history across every shop — warranty dates included.</span><span class="badge">in progress</span></span></a><a class="tile" href="../use-cases/relationship-score-from-your-own-data.html"><img src="../assets/img/relationship-score-from-your-own-data-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A relationship score from your own mail and messages</strong><span>A CRM&#x27;s most valuable feature — who you are losing touch with — rebuilt from data you already own, with the same published factors and your own weights.</span></span></a><a class="tile" href="../use-cases/crm-replacement-activity-cockpit.html"><img src="../assets/img/crm-replacement-activity-cockpit-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Replacing a CRM before the renewal date</strong><span>Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixed exit date.</span><span class="badge">in progress</span></span></a><a class="tile" href="../use-cases/booking-rules-next-to-your-accounting-package.html"><img src="../assets/img/booking-rules-next-to-your-accounting-package-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Keep the accounting package, own the booking rules</strong><span>The official books stay in the accounting package. The knowledge of <em>how</em> things are booked moves out of people&#x27;s heads into a readable rule file, and a mirror of the books makes them queryable.</span></span></a><a class="tile" href="../use-cases/one-cockpit-instead-of-fifteen-apps.html"><img src="../assets/img/one-cockpit-instead-of-fifteen-apps-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>One cockpit instead of fifteen apps</strong><span>Actions, ideas, incidents, finance, documents and photos — all as files with status fields, all readable in one app on the phone.</span></span></a></div>
+  <h2>Related articles</h2><ul class="concept-links"><li><a href="../articles/vibe-coding-without-the-hangover.html">Vibe Coding Without the Hangover</a></li><li><a href="https://structurebeatsmagic.com/articles/rules-before-models.html">Rules Before Models</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/your-database-is-a-view.html">Your Database Is a View</a> <span class="muted">— Structure Beats Magic</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <p><a href="index.html#sources">&larr; All tools and sources</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>
