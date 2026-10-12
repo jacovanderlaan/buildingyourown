@@ -780,6 +780,10 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
 /* collections: tiles, facts, concepts, chips */
 nav.main a.on{color:var(--accent);font-weight:650}
 .prose{max-width:760px}
+/* Article column aligned with the menu edges (Jaco, 12 Oct 2026); running text keeps a readable measure, images and fact blocks use the full width. */
+.wrap.prose{max-width:var(--max)}
+.wrap.prose > p,.wrap.prose > ul,.wrap.prose > ol,.wrap.prose > blockquote{max-width:72ch}
+.wrap.prose > .hero-img{aspect-ratio:2/1;object-fit:cover}  /* full width at 3:2 was taller than the screen */
 .prose h2{margin-top:2rem}
 .prose table{width:100%;border-collapse:collapse;font-size:.95rem}
 .prose td,.prose th{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
@@ -847,7 +851,7 @@ a.card:hover{text-decoration:none;border-color:var(--accent)}
 /* hybrid hero: frame only; the .hybrid rules come from the family token block */
 .hero .hybrid{margin:36px 0 0;border:1px solid var(--line);border-radius:14px}
 /* about page: photos beside the long story, alternating sides */
-.about-long{max-width:880px}
+.about-long{max-width:none}  /* photos end on the menu's right edge (was 880px, 12 Oct 2026) */
 .about-long::after{content:"";display:block;clear:both}
 .about-long h2{clear:both}
 .about-photo{width:44%;margin-top:6px}
