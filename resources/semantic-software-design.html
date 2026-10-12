@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Semantic Software Design — Building Your Own</title>
+<meta name="description" content="Design starts with meaning: name the concepts of the business before choosing any technology." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261012d" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a><a href="../resources/index.html#ideas">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="software-and-data.html">Software and data architecture</a> · book</div>
+  <h1>Semantic Software Design</h1>
+  <p class="sub">Design starts with meaning: name the concepts of the business before choosing any technology.</p>
+  <p class="muted">Eben Hewitt · 2019</p>
+  <img class="hero-img" src="../assets/img/semantic-software-design-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <h2>What the book is about</h2>
+<p>Eben Hewitt argues that software is a language artifact before it is a technical one. Systems fail on vague concepts and names more often than on code, so the first job is to design the concepts.</p>
+<h2>Ideas I took from it</h2>
+<ul>
+<li><strong>A shared vocabulary does more than a framework choice.</strong></li>
+<li><strong>Ambiguity is the most expensive defect.</strong> A vague term spreads silently into data, screens and decisions.</li>
+<li><strong>Technology decays; clear concepts compound.</strong></li>
+</ul>
+<h2>On a Build Day</h2>
+<p>We start by naming the few things your tool is about (a customer, an invoice, a visit) and what each one means, before the AI writes anything.</p>
+  <h2>Links</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/books/semantic-software-design.html">My notes on Structure Beats Magic</a></li></ul>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/meaning-before-mechanism.html">Meaning Before Mechanism</a> <span class="muted">— A semantic model is not a technology. The same meaning can ship as a graph, an API, a data product or a contract — decide what it means before deciding what to buy.</span></li><li><a href="https://structurebeatsmagic.com/concepts/model-the-meaning-you-need.html">Model the Meaning You Need</a> <span class="muted">— The enterprise ontology that models everything ships nothing. Grow shared meaning one high-value use case at a time — and leave batch_id alone.</span></li><li><a href="https://breakthroughmodeling.com/concepts/metadata-first.html">Metadata First</a> <span class="muted">— Metadata is the material Breakthrough Modeling is built from — structure, logic and meaning captured as data, so the platform and the AI can both read and run it.</span></li></ul>
+  <h2>Used in these use cases</h2><div class="tiles"><a class="tile" href="../use-cases/a-data-model-from-a-proven-pattern.html"><img src="../assets/img/a-data-model-from-a-proven-pattern-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A data model in an afternoon, from a proven pattern</strong><span>Parties, products, orders, agreements, locations, accounts and events have been modelled well for decades. Start from those patterns, keep what you need, add your own rules, and generate the database from it.</span></span></a></div>
+  <h2>Related articles</h2><ul class="concept-links"><li><a href="../articles/vibe-coding-without-the-hangover.html">Vibe Coding Without the Hangover</a></li><li><a href="https://structurebeatsmagic.com/articles/rules-before-models.html">Rules Before Models</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/your-database-is-a-view.html">Your Database Is a View</a> <span class="muted">— Structure Beats Magic</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <h2>More in Software and data architecture</h2><div class="concepts"><a class="concept" href="clean-architecture.html"><img class="concept-thumb" src="../assets/img/clean-architecture-hero.webp" width="480" height="320" alt="" loading="lazy" /><strong>Clean Architecture</strong><em class="muted">Robert C. Martin · 2017</em><span>Keep the rules of the business apart from the tools around them. That separation is what lets you swap the AI, the database or the screen later.</span><em>Read more &rarr;</em></a><a class="concept" href="data-model-resource-book.html"><img class="concept-thumb" src="../assets/img/data-model-resource-book-hero.webp" width="480" height="320" alt="" loading="lazy" /><strong>The Data Model Resource Book (Universal Data Models)</strong><em class="muted">Len Silverston</em><span>Proven patterns for parties, agreements, products and work efforts. The CRM replacement on this site uses its Work Effort pattern.</span><em>Read more &rarr;</em></a><a class="concept" href="pragmatic-programmer.html"><img class="concept-thumb" src="../assets/img/pragmatic-programmer-hero.webp" width="480" height="320" alt="" loading="lazy" /><strong>The Pragmatic Programmer (20th anniversary edition)</strong><em class="muted">David Thomas &amp; Andrew Hunt · 2019</em><span>Tracer bullets, small steps, don&#x27;t repeat yourself. Written for programmers, and more relevant now that the AI is the one typing.</span><em>Read more &rarr;</em></a></div>
+  <p><a href="software-and-data.html">&larr; All software and data architecture</a> &middot; <a href="index.html">All resources</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

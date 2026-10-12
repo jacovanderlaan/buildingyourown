@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>The Data Model Resource Book (Universal Data Models) — Building Your Own</title>
+<meta name="description" content="Proven patterns for parties, agreements, products and work efforts. The CRM replacement on this site uses its Work Effort pattern." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261012d" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/index.html#foundations">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/index.html#books">Literature</a><a href="../resources/index.html#sources">Tools and sources</a><a href="../resources/index.html#ideas">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="software-and-data.html">Software and data architecture</a> · book</div>
+  <h1>The Data Model Resource Book (Universal Data Models)</h1>
+  <p class="sub">Proven patterns for parties, agreements, products and work efforts. The CRM replacement on this site uses its Work Effort pattern.</p>
+  <p class="muted">Len Silverston</p>
+  <img class="hero-img" src="../assets/img/data-model-resource-book-hero.webp" width="1536" height="1024" alt="" loading="eager" />
+  <h2>What the book is about</h2>
+<p>Len Silverston's library of universal data models: patterns for people and organisations, products, orders, agreements, work efforts and accounting that apply to almost every company. Instead of designing a data model from a blank page, you start from one that has already been proven many times.</p>
+<h2>Ideas I took from it</h2>
+<ul>
+<li><strong>People and organisations are one concept with roles.</strong> A customer, a supplier and an employee are the same "party" in different roles, which removes a lot of duplicate data.</li>
+<li><strong>Work efforts nest.</strong> A project contains tasks, tasks contain activities, and the same pattern covers all of them. My own CRM is built on it.</li>
+<li><strong>Take the fraction you need.</strong> Nobody uses the whole book; you take the part that fits your use case.</li>
+</ul>
+<p>I met Len Silverston in 2017, and his book still shapes how I model.</p>
+<h2>On a Build Day</h2>
+<p>You do not need to read it. If your use case needs a data model, we take the relevant pattern from it, so your small tool starts with a structure that will hold.</p>
+  <h2>Links</h2><ul class="concept-links"><li><a href="https://www.wiley.com/en-us/The+Data+Model+Resource+Book%2C+Volume+1%3A+A+Library+of+Universal+Data+Models+for+All+Enterprises%2C+Revised+Edition-p-9780471380238">Wiley (Volume 1)</a></li></ul>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/proven-patterns.html">Proven Patterns</a> <span class="muted">— Proven shapes you reach for instead of inventing — a pattern captures a repeatable solution (Data Vault, dimensional, temporal) so you compose from known-good parts.</span></li><li><a href="https://breakthroughmodeling.com/concepts/do-not-reinvent-the-wheel.html">Do Not Reinvent the Wheel</a> <span class="muted">— The new way of modeling stands on the shoulders of giants — distil the essentials from decades of data-modeling work and keep what works, rather than starting from scratch.</span></li><li><a href="https://breakthroughmodeling.com/concepts/model-the-process.html">Model the Process, Not Just the Model</a> <span class="muted">— Model not just the data model and the transformations, but the whole process — delivery, integration, migration, quality checking, the backroom — and how the system changes over time.</span></li></ul>
+  <h2>Used in these use cases</h2><div class="tiles"><a class="tile" href="../use-cases/a-data-model-from-a-proven-pattern.html"><img src="../assets/img/a-data-model-from-a-proven-pattern-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A data model in an afternoon, from a proven pattern</strong><span>Parties, products, orders, agreements, locations, accounts and events have been modelled well for decades. Start from those patterns, keep what you need, add your own rules, and generate the database from it.</span></span></a><a class="tile" href="../use-cases/crm-replacement-activity-cockpit.html"><img src="../assets/img/crm-replacement-activity-cockpit-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Replacing a CRM before the renewal date</strong><span>Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixed exit date.</span><span class="badge">in progress</span></span></a></div>
+  <h2>Related articles</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/articles/sidecar-markdown.html">Sidecar Markdown — Giving a PDF the Thing It Can Never Have</a> <span class="muted">— Structure Beats Magic</span></li><li><a href="https://structurebeatsmagic.com/articles/context-engineering-for-one.html">Context Engineering for One</a> <span class="muted">— Structure Beats Magic</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/data-models.html">Building your own data models</a><a class="chip" href="../topics/business-os.html">The business OS</a></div>
+  <h2>More in Software and data architecture</h2><div class="concepts"><a class="concept" href="clean-architecture.html"><img class="concept-thumb" src="../assets/img/clean-architecture-hero.webp" width="480" height="320" alt="" loading="lazy" /><strong>Clean Architecture</strong><em class="muted">Robert C. Martin · 2017</em><span>Keep the rules of the business apart from the tools around them. That separation is what lets you swap the AI, the database or the screen later.</span><em>Read more &rarr;</em></a><a class="concept" href="pragmatic-programmer.html"><img class="concept-thumb" src="../assets/img/pragmatic-programmer-hero.webp" width="480" height="320" alt="" loading="lazy" /><strong>The Pragmatic Programmer (20th anniversary edition)</strong><em class="muted">David Thomas &amp; Andrew Hunt · 2019</em><span>Tracer bullets, small steps, don&#x27;t repeat yourself. Written for programmers, and more relevant now that the AI is the one typing.</span><em>Read more &rarr;</em></a><a class="concept" href="semantic-software-design.html"><img class="concept-thumb" src="../assets/img/semantic-software-design-hero.webp" width="480" height="320" alt="" loading="lazy" /><strong>Semantic Software Design</strong><em class="muted">Eben Hewitt · 2019</em><span>Design starts with meaning: name the concepts of the business before choosing any technology.</span><em>Read more &rarr;</em></a></div>
+  <p><a href="software-and-data.html">&larr; All software and data architecture</a> &middot; <a href="index.html">All resources</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>
