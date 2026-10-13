@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Dashboards — Building Your Own</title>
+<meta name="description" content="The few lists and numbers you check every week, on one screen, from your own files." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#intelligence">→ Intelligence</a> &middot; Level 11</div> <span class="badge">proposed</span>
+  <h1>Build Your Own Dashboards</h1>
+  <p class="sub">The few lists and numbers you check every week, on one screen, from your own files.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="memory.html">Memory</a> &middot; <a href="pipelines.html">Pipelines</a> &middot; <a href="insights.html">Insights</a></p>
+  <p>Everyone wants the dashboard first. It only works when the data underneath has one shape, so most of this level is about that shape, and the screen comes quickly after.</p>
+<h2>You leave with</h2>
+<ul>
+<li>One dashboard or Kanban board on your own files, showing the three lists or numbers you check every week.</li>
+<li>Every tile linked to the file or table it reads from, so one click shows the source.</li>
+<li>One status field shared by everything on the board, with a short, fixed list of values.</li>
+<li>A version you can open on your phone.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>garden center</strong> has one board of plant orders per supplier: ordered, delivered, paid.</li>
+<li>A <strong>cleaning company</strong> sees on one screen which sites were done this week, which were skipped and why.</li>
+<li>A <strong>home-care team</strong> works from a Kanban board of client requests (new, planned, done), with the oldest open request at the top.</li>
+<li>A <strong>guesthouse</strong> shows tonight's arrivals, open payments and rooms still to clean on a tablet at the desk.</li>
+<li>A <strong>freelance developer</strong> keeps one board with quotes out, work in progress and invoices unpaid.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which three lists do you open every Monday morning, in three different places?</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>20 min</strong> — Pick the three lists, and decide which decision each one helps you make.</li>
+<li><strong>30 min</strong> — Give them one shape: the same status field with the same few values.</li>
+<li><strong>50 min</strong> — Build the board with the AI, on your own files: a board view in Obsidian, or one page over a small database.</li>
+<li><strong>30 min</strong> — Test it on your real Monday question and fix what is missing.</li>
+<li><strong>20 min</strong> — Open it on your phone.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>The three lists, as a spreadsheet, an export or notes.</li>
+<li>One decision you make from them every week.</li>
+</ul>
+<h2>Tools</h2>
+<p>Obsidian with a board or table view, or one HTML page over DuckDB, built with Claude. Optional: a shared folder or small home server, to reach the board from your phone.</p>
+<h2>Example from my own system</h2>
+<p>Every incident in my system, a failed import, a broken page, a dispute with a supplier, is a small file with fixed fields. A script collects the incidents together with my actions and ideas into one table, and they show up on the same dashboard: 51 incidents tracked, 36 open and 15 closed. The board showed a weak spot I had not seen: fixed, resolved, closed and a few free-text variants all meant roughly the same. A board that groups by status needs a fixed list of values first. See <a href="../use-cases/incident-management.html">Incident management that turns every failure into a rule</a> and <a href="../use-cases/one-cockpit-instead-of-fifteen-apps.html">One cockpit instead of fifteen apps</a>.</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>Building the screen before the data has one shape.</strong> Most of the work is the status field, not the layout.</li>
+<li><strong>Fifteen tiles.</strong> Nobody reads fifteen. Start with three that each lead to a decision.</li>
+<li><strong>A number without a date.</strong> A tile that stopped updating looks exactly like one that is current. Show when it was last refreshed.</li>
+</ul>
+<h2>Works best after</h2>
+<p>Build Your Own Memory and Build Your Own Pipelines, so the board has files and data to read, and Build Your Own Insights, so you know which numbers deserve a place on it.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/a-toy-vs-an-instrument.html">A Toy vs an Instrument</a> <span class="muted">— Without structure AI is a toy; with structure it becomes an instrument.</span></li><li><a href="https://structurebeatsmagic.com/concepts/escalate-by-exception.html">Escalate by Exception</a> <span class="muted">— Route the easy work to the cheap path and reserve the expensive one for what actually needs it. Power by exception, not by default.</span></li><li><a href="https://structurebeatsmagic.com/concepts/play-with-the-blocks.html">Play with the Blocks</a> <span class="muted">— Like Lego — snap, try, rebuild. Tinker in your own life to learn what&#x27;s possible.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/incident-management.html"><img src="../assets/img/incident-management-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Incident management that turns every failure into a rule</strong><span>Every disruption — a failed import, a broken page, a dispute with a supplier — becomes a small file with an owner, a status and a lesson. The lesson becomes a rule, so the same failure does not come back.</span></span></a><a class="tile" href="../use-cases/one-cockpit-instead-of-fifteen-apps.html"><img src="../assets/img/one-cockpit-instead-of-fifteen-apps-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>One cockpit instead of fifteen apps</strong><span>Actions, ideas, incidents, finance, documents and photos — all as files with status fields, all readable in one app on the phone.</span></span></a><a class="tile" href="../use-cases/building-blocks-for-quick-apps.html"><img src="../assets/img/building-blocks-for-quick-apps-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Building blocks that make the next app quick</strong><span>My own system runs on a small set of reusable pieces — list, table, cards, timeline, board, document viewer, filters, search and a cockpit pattern. A new screen is mostly configuration.</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/duckdb.html">DuckDB</a> <span class="muted">— A database in a single file, no server. Ideal as a rebuildable mirror of files you own.</span></li><li><a href="../resources/visual-thinking.html">Visual Thinking</a> <span class="muted">— Drawing the problem before building it. Most scoping on a Build Day happens on paper first.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/building-blocks.html">Components and building blocks</a><a class="chip" href="../topics/proof-of-concept.html">From proof of concept to something you rely on</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-dashboards" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-dashboards">{"nodes": [{"slug": "lv:dashboards", "title": "Dashboards", "desc": "The few lists and numbers you check every week, on one screen, from your own files.", "href": "../series/dashboards.html", "go": "Open level"}, {"slug": "lv:memory", "title": "Memory", "desc": "Your notes, documents and decisions, ordered so you and your AI can find them.", "href": "../series/memory.html", "go": "Open level"}, {"slug": "lv:pipelines", "title": "Pipelines", "desc": "One import that runs by itself: export, clean, load, and the same result every time.", "href": "../series/pipelines.html", "go": "Open level"}, {"slug": "lv:insights", "title": "Insights", "desc": "Questions about your business answered from your own data, each with the number and where it comes from.", "href": "../series/insights.html", "go": "Open level"}, {"slug": "c:sbm:a-toy-vs-an-instrument", "title": "A Toy vs an Instrument", "desc": "Without structure AI is a toy; with structure it becomes an instrument.", "href": "https://structurebeatsmagic.com/concepts/a-toy-vs-an-instrument.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:sbm:escalate-by-exception", "title": "Escalate by Exception", "desc": "Route the easy work to the cheap path and reserve the expensive one for what actually needs it. Power by exception, not by default.", "href": "https://structurebeatsmagic.com/concepts/escalate-by-exception.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:sbm:play-with-the-blocks", "title": "Play with the Blocks", "desc": "Like Lego — snap, try, rebuild. Tinker in your own life to learn what's possible.", "href": "https://structurebeatsmagic.com/concepts/play-with-the-blocks.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "uc:incident-management", "title": "Incident management that turns every failure into a rule", "desc": "Every disruption — a failed import, a broken page, a dispute with a supplier — becomes a small file with an owner, a status and a lesson. The lesson b", "href": "../use-cases/incident-management.html", "go": "Open use case"}, {"slug": "uc:one-cockpit-instead-of-fifteen-apps", "title": "One cockpit instead of fifteen apps", "desc": "Actions, ideas, incidents, finance, documents and photos — all as files with status fields, all readable in one app on the phone.", "href": "../use-cases/one-cockpit-instead-of-fifteen-apps.html", "go": "Open use case"}], "edges": [["lv:dashboards", "lv:memory"], ["lv:dashboards", "lv:pipelines"], ["lv:dashboards", "lv:insights"], ["lv:dashboards", "c:sbm:a-toy-vs-an-instrument"], ["lv:dashboards", "c:sbm:escalate-by-exception"], ["lv:dashboards", "c:sbm:play-with-the-blocks"], ["lv:dashboards", "uc:incident-management"], ["lv:dashboards", "uc:one-cockpit-instead-of-fifteen-apps"], ["c:sbm:escalate-by-exception", "uc:incident-management"]], "center": "lv:dashboards"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="insights.html">&larr; Build Your Own Insights</a> &middot; <a href="planner.html">Build Your Own Planner &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

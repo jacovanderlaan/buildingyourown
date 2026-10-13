@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Skills — Building Your Own</title>
+<meta name="description" content="One command for a task you repeat, with the same result every time." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#ai">AI</a> &middot; Level 8</div> 
+  <h1>Build Your Own Skills</h1>
+  <p class="sub">One command for a task you repeat, with the same result every time.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="memory.html">Memory</a> &middot; <a href="integrations.html">Integrations</a></p>
+  <p>A skill is a short written instruction your AI follows step by step: what goes in, what it does, what comes out. You write it once, and you stop explaining the same task every week.</p>
+<h2>You leave with</h2>
+<ul>
+<li>One skill for a task you or your team repeat every week, written as a short file: input, steps, output.</li>
+<li>One command that runs it, tested on three real inputs from your own work.</li>
+<li>A short list of what the skill must never do, written into the skill itself.</li>
+<li>The spec for a second skill, ready for next time.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>hair salon</strong> has a skill that turns tomorrow's bookings into a reminder text per client, in the salon's own tone.</li>
+<li>A <strong>plumber</strong> types one command after a job and gets a draft invoice line from the work order: hours, parts, VAT.</li>
+<li>A <strong>bookkeeping office</strong> runs one skill on a client's bank export that lists the lines it cannot categorize, instead of guessing them.</li>
+<li>A <strong>small hotel</strong> answers a booking request with a skill that picks the room, the price and the cancellation terms from its own rate sheet.</li>
+<li>A <strong>freelance translator</strong> runs one skill on every new job that checks word count, deadline and rate before saying yes.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which task do you explain again every few weeks, to a new colleague or to your AI? Bring three real examples of it.</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>20 min</strong> — Pick one task. Write down what goes in and what a correct result looks like.</li>
+<li><strong>40 min</strong> — Write the skill as a spec: input, steps, output, and what it must not do.</li>
+<li><strong>40 min</strong> — Run it on three real inputs. Compare each result with what you would have made by hand.</li>
+<li><strong>30 min</strong> — Fix the spec where the result was wrong, and run the same three inputs again.</li>
+<li><strong>20 min</strong> — Give it a command name and one line on when to use it, so a colleague can run it too.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>A laptop and three to five real examples of the task: the input, and the result you made by hand.</li>
+<li>The steps you follow now, even if they only live in your head.</li>
+</ul>
+<h2>Tools</h2>
+<p>Claude Code to write and run the skill; any text editor. Optional: the same instruction saved in a chat project, for colleagues who do not use a terminal.</p>
+<h2>Example from my own system</h2>
+<p>One of my skills takes an export of my AI chats and files every conversation in the folder of the day it happened. It filed 638 ChatGPT conversations and 9 Claude conversations, and the next export goes through the same command with the same result. Before the skill, I would have typed the same instructions every time. Routing phone scans works the same way, as a written runbook the AI follows: see <a href="../use-cases/scan-to-the-right-folder.html">From phone scan to the right folder, named and indexed</a>.</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>Testing on the example you wrote it from.</strong> It will pass. Test on input the skill has not seen.</li>
+<li><strong>One skill that does five things.</strong> One command, one result. Chain two skills later if you need both.</li>
+<li><strong>No idea what a correct result is.</strong> If you cannot say it, you cannot test the skill, and you will not notice when it starts to drift.</li>
+</ul>
+<h2>Works best after</h2>
+<p>Build Your Own Memory gives the skill something to read. Build Your Own Integrations gives it access to the system where the task lives, such as your mail or your bookkeeping.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/reusable-skills.html">Reusable Skills</a> <span class="muted">— Reusable, AI-readable units of behavior — a skill packages how to do one thing well, versioned and callable, so people and AI apply it the same way every time.</span></li><li><a href="https://structurebeatsmagic.com/concepts/write-the-spec-not-the-prompt.html">Write the Spec, Not the Prompt</a> <span class="muted">— A prompt is a request you repeat. A spec is a contract the work is checked against — and it is the artefact that survives the session.</span></li><li><a href="https://structurebeatsmagic.com/concepts/runbooks.html">Runbooks</a> <span class="muted">— A repeatable procedure written down so a task is done the same way every time.</span></li><li><a href="https://structurebeatsmagic.com/concepts/evals-are-the-release-gate.html">Evals Are the Release Gate</a> <span class="muted">— An eval suite that doesn&#x27;t block a release isn&#x27;t a gate, it&#x27;s a report. No evals, no ship.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/scan-to-the-right-folder.html"><img src="../assets/img/scan-to-the-right-folder-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>From phone scan to the right folder, named and indexed</strong><span>A scan on the phone arrives in an inbox folder; one instruction routes it to its proper place, with a proper name and a metadata file.</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/anthropic-academy.html">Anthropic Academy</a> <span class="muted">— Free courses on working with Claude, from prompting to building agents.</span></li><li><a href="../resources/checklist-manifesto.html">The Checklist Manifesto</a> <span class="muted">— A checklist is not a lack of expertise; it is what expertise does when the stakes are real.</span></li><li><a href="../resources/claude-code.html">Claude Code</a> <span class="muted">— The AI coding tool most of the use cases on this site were built with. Strong when it gets a spec, rules and a way to check its own work.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/building-blocks.html">Components and building blocks</a><a class="chip" href="../topics/business-os.html">The business OS</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-skills" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-skills">{"nodes": [{"slug": "lv:skills", "title": "Skills", "desc": "One command for a task you repeat, with the same result every time.", "href": "../series/skills.html", "go": "Open level"}, {"slug": "lv:memory", "title": "Memory", "desc": "Your notes, documents and decisions, ordered so you and your AI can find them.", "href": "../series/memory.html", "go": "Open level"}, {"slug": "lv:integrations", "title": "Integrations", "desc": "the connectors that give your AI access", "href": "../series/integrations.html", "go": "Open level"}, {"slug": "c:btm:reusable-skills", "title": "Reusable Skills", "desc": "Reusable, AI-readable units of behavior — a skill packages how to do one thing well, versioned and callable, so people and AI apply it the same way ev", "href": "https://breakthroughmodeling.com/concepts/reusable-skills.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:sbm:write-the-spec-not-the-prompt", "title": "Write the Spec, Not the Prompt", "desc": "A prompt is a request you repeat. A spec is a contract the work is checked against — and it is the artefact that survives the session.", "href": "https://structurebeatsmagic.com/concepts/write-the-spec-not-the-prompt.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:sbm:runbooks", "title": "Runbooks", "desc": "A repeatable procedure written down so a task is done the same way every time.", "href": "https://structurebeatsmagic.com/concepts/runbooks.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "uc:scan-to-the-right-folder", "title": "From phone scan to the right folder, named and indexed", "desc": "A scan on the phone arrives in an inbox folder; one instruction routes it to its proper place, with a proper name and a metadata file.", "href": "../use-cases/scan-to-the-right-folder.html", "go": "Open use case"}, {"slug": "r:anthropic-academy", "title": "Anthropic Academy", "desc": "Free courses on working with Claude, from prompting to building agents.", "href": "../resources/anthropic-academy.html", "go": "Open resource"}, {"slug": "r:checklist-manifesto", "title": "The Checklist Manifesto", "desc": "A checklist is not a lack of expertise; it is what expertise does when the stakes are real.", "href": "../resources/checklist-manifesto.html", "go": "Open resource"}], "edges": [["lv:skills", "lv:memory"], ["lv:skills", "lv:integrations"], ["lv:skills", "c:btm:reusable-skills"], ["lv:skills", "c:sbm:write-the-spec-not-the-prompt"], ["lv:skills", "c:sbm:runbooks"], ["lv:skills", "uc:scan-to-the-right-folder"], ["lv:skills", "r:anthropic-academy"], ["lv:skills", "r:checklist-manifesto"], ["lv:memory", "uc:scan-to-the-right-folder"], ["c:sbm:write-the-spec-not-the-prompt", "r:anthropic-academy"], ["c:sbm:runbooks", "uc:scan-to-the-right-folder"], ["c:sbm:runbooks", "r:checklist-manifesto"], ["uc:scan-to-the-right-folder", "r:checklist-manifesto"]], "center": "lv:skills"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="integrations.html">&larr; Build Your Own Integrations</a> &middot; <a href="rules.html">Build Your Own Rules &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

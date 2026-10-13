@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Insights — Building Your Own</title>
+<meta name="description" content="Questions about your business answered from your own data, each with the number and where it comes from." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#intelligence">→ Intelligence</a> &middot; Level 10</div> 
+  <h1>Build Your Own Insights</h1>
+  <p class="sub">Questions about your business answered from your own data, each with the number and where it comes from.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="models.html">Models</a> &middot; <a href="pipelines.html">Pipelines</a> &middot; <a href="checks.html">Checks</a></p>
+  <p>This is where the layers underneath pay off: the structure, the data and the checks turn a question into an answer you can trust and repeat.</p>
+<h2>You leave with</h2>
+<ul>
+<li>Three questions about your business answered from your own data, each with the number and the table it comes from.</li>
+<li>The query behind each answer, saved, so you can run it again next month.</li>
+<li>One answer checked by hand against the source, so you know the method holds.</li>
+<li>A list of the questions you could not answer yet, and which data is missing for them.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>flower shop</strong> finds the customers who ordered for a birthday last year and have not ordered this year.</li>
+<li>An <strong>electrician</strong> sees which kind of job earns the most per hour once travel time is counted.</li>
+<li>A <strong>dental practice</strong> counts missed appointments per weekday, and moves the reminder to the day before the worst one.</li>
+<li>A <strong>café</strong> puts takings per hour next to the staff rota and sees which shift is overstaffed.</li>
+<li>A <strong>freelance designer</strong> learns how much of the year's revenue came from the top three clients.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which number would you like to know about your business, that nobody can give you without a day of spreadsheet work?</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>20 min</strong> — Choose three questions, and write down the answer you expect for each.</li>
+<li><strong>40 min</strong> — Load your exports into one small database.</li>
+<li><strong>50 min</strong> — Answer each question. The AI writes the query; you read it and run it.</li>
+<li><strong>30 min</strong> — Check one answer by hand against the original export.</li>
+<li><strong>20 min</strong> — Write each answer down with the number, the source and the date.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>One or two exports from your own systems (sales, invoices, bookings, appointments), as CSV or Excel.</li>
+<li>Three questions, with your guess for each answer.</li>
+</ul>
+<h2>Tools</h2>
+<p>DuckDB (free) for the data; Claude to write the queries; a spreadsheet for the hand check. Optional: Obsidian, to keep the answers as notes in your Memory.</p>
+<h2>Example from my own system</h2>
+<p>A CRM sells one feature above all: who you are losing touch with. I rebuilt it from my own mail, messages and calendar: 493,492 interactions in one table, scored on six factors the CRM vendor itself publishes, with my own weights. That gives 223 scored relationships. One factor did more than I expected: one-to-one mail versus bulk mail separates real relationships from newsletters, without a blocklist. See <a href="../use-cases/relationship-score-from-your-own-data.html">A relationship score from your own mail and messages</a>.</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>An answer without its source.</strong> A wrong number arrives in exactly the same shape as a right one. If it cannot point at its table, do not use it.</li>
+<li><strong>Asking the AI for the answer instead of the query.</strong> Let it write the query, read what it does, and run it yourself.</li>
+<li><strong>Skipping the checks.</strong> If a customer appears three times, your top-ten list is wrong. Clean the data before you ask it anything.</li>
+</ul>
+<h2>Works best after</h2>
+<p>Build Your Own Models, Build Your Own Pipelines and Build Your Own Checks: a clear model, data that arrives by itself, and checks that tell you the data can be trusted.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/reality-check.html">Reality Check</a> <span class="muted">— Test the model and the plan against the real world — the actual data, deliveries and behavior — not against the assumption you started with.</span></li><li><a href="https://structurebeatsmagic.com/concepts/a-confident-error-has-no-tell.html">A Confident Error Has No Tell</a> <span class="muted">— A hallucination arrives in exactly the same shape as a correct answer. That is the whole problem — and why fluency is not evidence.</span></li><li><a href="https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html">Own the Layer or Rent the Feature</a> <span class="muted">— Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what you can build on.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/relationship-score-from-your-own-data.html"><img src="../assets/img/relationship-score-from-your-own-data-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A relationship score from your own mail and messages</strong><span>A CRM&#x27;s most valuable feature — who you are losing touch with — rebuilt from data you already own, with the same published factors and your own weights.</span></span></a><a class="tile" href="../use-cases/household-ledger.html"><img src="../assets/img/household-ledger-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A household and business ledger you own</strong><span>Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The finance app becomes a view, not a vault.</span></span></a><a class="tile" href="../use-cases/purchase-history-from-order-mails.html"><img src="../assets/img/purchase-history-from-order-mails-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A purchase history from order confirmations</strong><span>Every web shop sends an order confirmation. Read them all into one table and you have a purchase history across every shop — warranty dates included.</span><span class="badge">in progress</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/duckdb.html">DuckDB</a> <span class="muted">— A database in a single file, no server. Ideal as a rebuildable mirror of files you own.</span></li><li><a href="../resources/thinking-in-systems.html">Thinking in Systems: A Primer</a> <span class="muted">— Stocks, flows and feedback loops. Useful for seeing why a tool that works on day one can drift by month three.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/data-models.html">Building your own data models</a><a class="chip" href="../topics/privacy-and-control.html">Privacy and control</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-insights" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-insights">{"nodes": [{"slug": "lv:insights", "title": "Insights", "desc": "Questions about your business answered from your own data, each with the number and where it comes from.", "href": "../series/insights.html", "go": "Open level"}, {"slug": "lv:models", "title": "Models", "desc": "A small map of what your business is made of, so your notes and your data share one shape.", "href": "../series/models.html", "go": "Open level"}, {"slug": "lv:pipelines", "title": "Pipelines", "desc": "One import that runs by itself: export, clean, load, and the same result every time.", "href": "../series/pipelines.html", "go": "Open level"}, {"slug": "lv:checks", "title": "Checks", "desc": "validations, data-quality rules and freshness checks", "href": "../series/checks.html", "go": "Open level"}, {"slug": "c:btm:reality-check", "title": "Reality Check", "desc": "Test the model and the plan against the real world — the actual data, deliveries and behavior — not against the assumption you started with.", "href": "https://breakthroughmodeling.com/concepts/reality-check.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:sbm:a-confident-error-has-no-tell", "title": "A Confident Error Has No Tell", "desc": "A hallucination arrives in exactly the same shape as a correct answer. That is the whole problem — and why fluency is not evidence.", "href": "https://structurebeatsmagic.com/concepts/a-confident-error-has-no-tell.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:sbm:own-the-layer-or-rent-the-feature", "title": "Own the Layer or Rent the Feature", "desc": "Every knowledge product answers two questions: who maintains it, and is it a layer of its own or a feature of something else. The answers decide what ", "href": "https://structurebeatsmagic.com/concepts/own-the-layer-or-rent-the-feature.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "uc:relationship-score-from-your-own-data", "title": "A relationship score from your own mail and messages", "desc": "A CRM's most valuable feature — who you are losing touch with — rebuilt from data you already own, with the same published factors and your own weight", "href": "../use-cases/relationship-score-from-your-own-data.html", "go": "Open use case"}, {"slug": "uc:household-ledger", "title": "A household and business ledger you own", "desc": "Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The f", "href": "../use-cases/household-ledger.html", "go": "Open use case"}], "edges": [["lv:insights", "lv:models"], ["lv:insights", "lv:pipelines"], ["lv:insights", "lv:checks"], ["lv:insights", "c:btm:reality-check"], ["lv:insights", "c:sbm:a-confident-error-has-no-tell"], ["lv:insights", "c:sbm:own-the-layer-or-rent-the-feature"], ["lv:insights", "uc:relationship-score-from-your-own-data"], ["lv:insights", "uc:household-ledger"], ["lv:pipelines", "uc:household-ledger"], ["lv:checks", "c:btm:reality-check"], ["lv:checks", "c:sbm:a-confident-error-has-no-tell"], ["c:sbm:own-the-layer-or-rent-the-feature", "uc:relationship-score-from-your-own-data"]], "center": "lv:insights"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="rules.html">&larr; Build Your Own Rules</a> &middot; <a href="dashboards.html">Build Your Own Dashboards &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

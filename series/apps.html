@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Apps — Building Your Own</title>
+<meta name="description" content="Small working tools on your own files: a lookup page, a checklist, a form that writes to the right place." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#intelligence">→ Intelligence</a> &middot; Level 13</div> 
+  <h1>Build Your Own Apps</h1>
+  <p class="sub">Small working tools on your own files: a lookup page, a checklist, a form that writes to the right place.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="memory.html">Memory</a> &middot; <a href="models.html">Models</a> &middot; <a href="pipelines.html">Pipelines</a></p>
+  <p>A dashboard shows you something. An app lets you do something with it. With AI typing the code, the hard part is deciding what the app should do, and that part is yours.</p>
+<h2>You leave with</h2>
+<ul>
+<li>One small app that runs on your laptop and reads your own files or database, for example a customer lookup or a daily checklist.</li>
+<li>A one-page spec for it: who uses it, what goes in, what comes out, what it must never change.</li>
+<li>A second screen added as configuration only, without new code, so you see how the next app gets quick.</li>
+<li>A short test you can run again after every change.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>bike shop</strong> types a frame number and sees the owner, the last service and what was replaced.</li>
+<li>A <strong>plumber</strong> opens a checklist per job type on the phone, and the finished list is saved in the job's note.</li>
+<li>A <strong>physiotherapy practice</strong> has an intake form that writes a new client note with the right header fields.</li>
+<li>A <strong>bed and breakfast</strong> gets a page that shows today's arrivals, their room and any diet wishes, from the booking export.</li>
+<li>A <strong>freelance translator</strong> keeps a rate calculator that uses last year's real hours per client.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which small task do you do by hand every day because no tool fits it exactly? Bring the files that task uses.</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>20 min</strong> — Pick one job for the app and write the one-page spec together. One user, one task.</li>
+<li><strong>30 min</strong> — Shape the data the app reads into one table or one folder of notes with the same fields.</li>
+<li><strong>70 min</strong> — Build the first screen with Claude Code. You describe, the AI types, you check every result against your own data.</li>
+<li><strong>30 min</strong> — Test with real input, including the odd cases: an empty field, a duplicate, a name with an accent.</li>
+<li><strong>30 min</strong> — Add a second list as a configuration row, and write down the rule that made it easy.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>A laptop and the files or export the app will read (a client list, a product list, a booking export).</li>
+<li>One task you would like the app to do, described in two sentences.</li>
+</ul>
+<h2>Tools</h2>
+<p>Claude Code for the building; a browser to run the app; your Memory and, if you have one, a DuckDB file from the Pipelines level. Optional: a phone to try the screen on.</p>
+<h2>Example from my own system</h2>
+<p>My own system runs on a small set of building blocks: list, table, cards, timeline, board, a document viewer, filters and a search. Thirteen small apps share one shell, and 156 screen areas are rows in a configuration file instead of code. Adding a screen means adding a row: label, entity, view, filter. See <a href="../use-cases/building-blocks-for-quick-apps.html">Building blocks that make the next app quick</a>.</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>Building every app from scratch.</strong> I had three copies of the same path logic, and they gave three different bugs. Build the list view once and reuse it.</li>
+<li><strong>Letting the app write without a dry run.</strong> An app that changes your source files should first show what it would change. Make that the default.</li>
+<li><strong>Sharing it too early.</strong> My apps are built for one person on a private network, without a login. Before a colleague uses one, it needs access control. That is the Safeguards level.</li>
+</ul>
+<h2>Works best after</h2>
+<p>Memory, Models and Pipelines. An app is only as good as the data it reads: with folders, a model and one clean import in place, the app itself is the quick part.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/vibe-coding.html">Vibe Coding</a> <span class="muted">— Use AI to quickly build real things — especially nice interfaces on top of the metadata — to explore, prototype and give people a way in. Great for experimenting; just don&#x27;t ship the unspecified, ungated style to production.</span></li><li><a href="https://breakthroughmodeling.com/concepts/decompose-and-compose.html">Decompose and Compose</a> <span class="muted">— Break the complex whole into small, self-contained parts you can name, model and check one at a time — the core move of thinking in structures.</span></li><li><a href="https://structurebeatsmagic.com/concepts/play-with-the-blocks.html">Play with the Blocks</a> <span class="muted">— Like Lego — snap, try, rebuild. Tinker in your own life to learn what&#x27;s possible.</span></li><li><a href="https://breakthroughmodeling.com/concepts/fail-fast.html">Fail Fast</a> <span class="muted">— Set experiments up to fail quickly and cheaply, read the signal honestly, and move on — don&#x27;t linger in something that, in the end, may not work.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/building-blocks-for-quick-apps.html"><img src="../assets/img/building-blocks-for-quick-apps-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Building blocks that make the next app quick</strong><span>My own system runs on a small set of reusable pieces — list, table, cards, timeline, board, document viewer, filters, search and a cockpit pattern. A new screen is mostly configuration.</span></span></a><a class="tile" href="../use-cases/crm-replacement-activity-cockpit.html"><img src="../assets/img/crm-replacement-activity-cockpit-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Replacing a CRM before the renewal date</strong><span>Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixed exit date.</span><span class="badge">in progress</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/claude-code.html">Claude Code</a> <span class="muted">— The AI coding tool most of the use cases on this site were built with. Strong when it gets a spec, rules and a way to check its own work.</span></li><li><a href="../resources/pragmatic-programmer.html">The Pragmatic Programmer (20th anniversary edition)</a> <span class="muted">— Tracer bullets, small steps, don&#x27;t repeat yourself. Written for programmers, and more relevant now that the AI is the one typing.</span></li><li><a href="../resources/tiny-experiments.html">Tiny Experiments</a> <span class="muted">— Treat a change as an experiment with a fixed duration instead of a goal. The same move is what makes a Build Day work: one small build, then decide.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/vibe-coding.html">Vibe coding practices that hold</a><a class="chip" href="../topics/building-blocks.html">Components and building blocks</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-apps" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-apps">{"nodes": [{"slug": "lv:apps", "title": "Apps", "desc": "Small working tools on your own files: a lookup page, a checklist, a form that writes to the right place.", "href": "../series/apps.html", "go": "Open level"}, {"slug": "lv:memory", "title": "Memory", "desc": "Your notes, documents and decisions, ordered so you and your AI can find them.", "href": "../series/memory.html", "go": "Open level"}, {"slug": "lv:models", "title": "Models", "desc": "A small map of what your business is made of, so your notes and your data share one shape.", "href": "../series/models.html", "go": "Open level"}, {"slug": "lv:pipelines", "title": "Pipelines", "desc": "One import that runs by itself: export, clean, load, and the same result every time.", "href": "../series/pipelines.html", "go": "Open level"}, {"slug": "c:btm:vibe-coding", "title": "Vibe Coding", "desc": "Use AI to quickly build real things — especially nice interfaces on top of the metadata — to explore, prototype and give people a way in. Great for ex", "href": "https://breakthroughmodeling.com/concepts/vibe-coding.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:btm:decompose-and-compose", "title": "Decompose and Compose", "desc": "Break the complex whole into small, self-contained parts you can name, model and check one at a time — the core move of thinking in structures.", "href": "https://breakthroughmodeling.com/concepts/decompose-and-compose.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:sbm:play-with-the-blocks", "title": "Play with the Blocks", "desc": "Like Lego — snap, try, rebuild. Tinker in your own life to learn what's possible.", "href": "https://structurebeatsmagic.com/concepts/play-with-the-blocks.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "uc:building-blocks-for-quick-apps", "title": "Building blocks that make the next app quick", "desc": "My own system runs on a small set of reusable pieces — list, table, cards, timeline, board, document viewer, filters, search and a cockpit pattern. A ", "href": "../use-cases/building-blocks-for-quick-apps.html", "go": "Open use case"}, {"slug": "uc:crm-replacement-activity-cockpit", "title": "Replacing a CRM before the renewal date", "desc": "Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixe", "href": "../use-cases/crm-replacement-activity-cockpit.html", "go": "Open use case"}], "edges": [["lv:apps", "lv:memory"], ["lv:apps", "lv:models"], ["lv:apps", "lv:pipelines"], ["lv:apps", "c:btm:vibe-coding"], ["lv:apps", "c:btm:decompose-and-compose"], ["lv:apps", "c:sbm:play-with-the-blocks"], ["lv:apps", "uc:building-blocks-for-quick-apps"], ["lv:apps", "uc:crm-replacement-activity-cockpit"], ["lv:models", "uc:crm-replacement-activity-cockpit"], ["lv:pipelines", "c:btm:decompose-and-compose"], ["c:btm:decompose-and-compose", "uc:building-blocks-for-quick-apps"]], "center": "lv:apps"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="planner.html">&larr; Build Your Own Planner</a> &middot; <a href="interfaces.html">Build Your Own Interfaces &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

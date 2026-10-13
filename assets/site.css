@@ -879,3 +879,6 @@ section.block.about-rest{padding-top:8px}
 /* graph view (How this connects), 13 Oct 2026 */
 .g-map{margin-top:2.5rem}
 .g-map h2{margin:.2rem 0 1rem}
+/* Build Your Own series (13 Oct 2026) */
+.series-fig{margin:1.5rem 0}
+.series-fig svg{display:block;width:100%;height:auto;max-width:720px}

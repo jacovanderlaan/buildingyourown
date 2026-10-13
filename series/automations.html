@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Automations — Building Your Own</title>
+<meta name="description" content="One job that runs on a schedule and does the work without you." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#data">Data</a> &middot; Level 6</div> 
+  <h1>Build Your Own Automations</h1>
+  <p class="sub">One job that runs on a schedule and does the work without you.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="pipelines.html">Pipelines</a> &middot; <a href="checks.html">Checks</a></p>
+  <p>Pipelines move data; automations do work with it: write the weekly summary, send the reminder, sort the inbox, file the photos. The job runs whether you remember it or not, and it tells you when it needs you.</p>
+<h2>You leave with</h2>
+<ul>
+<li>One scheduled job that does a real task for your business, such as a weekly summary, a reminder or a sorted list, and runs without you.</li>
+<li>A dry-run mode, so you can see what the job would do before it does it.</li>
+<li>A signal that it ran: a line in a log or a note in your Memory with the date and what it did.</li>
+<li>A message when it fails or finds something that needs a person, and silence when it does not.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>garden center</strong> gets a Monday list of plants that sold out last week, ready for the order.</li>
+<li>A <strong>painting company</strong> sends every customer a reminder two days before the job, from the planning export.</li>
+<li>A <strong>care agency</strong> gets a Friday overview of visits that were planned but not signed off.</li>
+<li>A <strong>holiday rental owner</strong> gets a note the evening before each arrival with the guest, the time and the open questions.</li>
+<li>A <strong>one-person accountant</strong> gets a daily list of clients whose documents are late, and nothing else.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which task do you do every week that is exactly the same as last week? Bring the last three times you did it.</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>30 min</strong> — Pick the job and describe "done" in two sentences: what goes in, what comes out, who reads it.</li>
+<li><strong>60 min</strong> — Build the job with the AI and run it by hand on your own data until the result is right.</li>
+<li><strong>30 min</strong> — Add the dry-run: the job shows what it would do, and only acts when you say so.</li>
+<li><strong>30 min</strong> — Put it on a schedule (the task planner on your laptop, or a small server) and let it run once while we watch.</li>
+<li><strong>30 min</strong> — Add the signal that it ran, and the one message that comes only when something needs you.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>The task you chose, with three real examples of its result: three weekly summaries, three reminder mails.</li>
+<li>The data the task needs, ideally from a pipeline you built at the Pipelines level.</li>
+</ul>
+<h2>Tools</h2>
+<p>Claude Code to write the job; Python; the scheduler your computer already has (Task Scheduler on Windows, cron on a Mac or a small server). Optional: a mail or chat connector for the message, from the Integrations level.</p>
+<h2>Example from my own system</h2>
+<p>Every morning a job reads the day's mail and sorts it with the decisions I made once per sender, about 1,380 of them. My daily note then shows a short triage section. On a typical day, 95 mails became one that needed me. The decisions are the asset; the job applies them every morning without asking. See <a href="../use-cases/ninety-five-mails-to-one.html">From 95 mails to the one that needs you</a>. My photo pipeline works the same way: it runs every day at 07:30, with dry-run as the default (<a href="../use-cases/media-pipeline-with-visibility-rules.html">A photo pipeline that knows what is private</a>).</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>No news is taken as good news.</strong> A job that stops makes no noise. Five of six accounts at one of my banks had not synced for months before I noticed. Build the alarm before you trust the automation.</li>
+<li><strong>Acting before looking.</strong> Run in dry-run until you have seen three correct results, then switch it on.</li>
+<li><strong>Messages for everything.</strong> A job that reports every success trains you to ignore it. Report the exception.</li>
+</ul>
+<h2>Works best after</h2>
+<p><a href="pipelines.html"><strong>Build Your Own Pipelines</strong></a> (level 4) and <a href="checks.html"><strong>Build Your Own Checks</strong></a> (level 5). An automation that works on unchecked data does the wrong work faster.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/hooks-over-hopes.html">Hooks Over Hopes</a> <span class="muted">— Every instruction to a model is a probability, not a promise. Rules that must always run belong in deterministic automation the model can&#x27;t skip.</span></li><li><a href="https://structurebeatsmagic.com/concepts/escalate-by-exception.html">Escalate by Exception</a> <span class="muted">— Route the easy work to the cheap path and reserve the expensive one for what actually needs it. Power by exception, not by default.</span></li><li><a href="https://structurebeatsmagic.com/concepts/silence-is-not-absence-of-failure.html">Silence Is Not Absence of Failure</a> <span class="muted">— No complaints does not mean no problems. It usually means people adapted to the errors and stopped mentioning them.</span></li><li><a href="https://breakthroughmodeling.com/concepts/compounding-efficiency.html">Compounding Efficiency</a> <span class="muted">— Spend time, money and attention where they compound — cut the meetings, the licensed bloat and the unstructured chat that add nothing, and put the resource into structure that pays back.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/ninety-five-mails-to-one.html"><img src="../assets/img/ninety-five-mails-to-one-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>From 95 mails to the one that needs you</strong><span>Existing mail filters and a set of decisions per sender become one classification, and a daily summary shows only what needs a human.</span></span></a><a class="tile" href="../use-cases/media-pipeline-with-visibility-rules.html"><img src="../assets/img/media-pipeline-with-visibility-rules-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A photo pipeline that knows what is private</strong><span>Every new photo is filed by day and activity, gets a metadata file, and is classified private, shared or never-share by rules on its folder — before anything leaves the house.</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/compounding.html">Compounding</a> <span class="muted">— Small consistent returns beat large occasional ones, given time. What matters is the number of deposits, not the size of one.</span></li><li><a href="../resources/systems-not-goals.html">Systems, not goals</a> <span class="muted">— A goal is reached and then leaves you without a next move; a system keeps producing.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/business-os.html">The business OS</a><a class="chip" href="../topics/building-blocks.html">Components and building blocks</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-automations" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-automations">{"nodes": [{"slug": "lv:automations", "title": "Automations", "desc": "One job that runs on a schedule and does the work without you.", "href": "../series/automations.html", "go": "Open level"}, {"slug": "lv:pipelines", "title": "Pipelines", "desc": "One import that runs by itself: export, clean, load, and the same result every time.", "href": "../series/pipelines.html", "go": "Open level"}, {"slug": "lv:checks", "title": "Checks", "desc": "validations, data-quality rules and freshness checks", "href": "../series/checks.html", "go": "Open level"}, {"slug": "c:sbm:hooks-over-hopes", "title": "Hooks Over Hopes", "desc": "Every instruction to a model is a probability, not a promise. Rules that must always run belong in deterministic automation the model can't skip.", "href": "https://structurebeatsmagic.com/concepts/hooks-over-hopes.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:sbm:escalate-by-exception", "title": "Escalate by Exception", "desc": "Route the easy work to the cheap path and reserve the expensive one for what actually needs it. Power by exception, not by default.", "href": "https://structurebeatsmagic.com/concepts/escalate-by-exception.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:sbm:silence-is-not-absence-of-failure", "title": "Silence Is Not Absence of Failure", "desc": "No complaints does not mean no problems. It usually means people adapted to the errors and stopped mentioning them.", "href": "https://structurebeatsmagic.com/concepts/silence-is-not-absence-of-failure.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "uc:ninety-five-mails-to-one", "title": "From 95 mails to the one that needs you", "desc": "Existing mail filters and a set of decisions per sender become one classification, and a daily summary shows only what needs a human.", "href": "../use-cases/ninety-five-mails-to-one.html", "go": "Open use case"}, {"slug": "uc:media-pipeline-with-visibility-rules", "title": "A photo pipeline that knows what is private", "desc": "Every new photo is filed by day and activity, gets a metadata file, and is classified private, shared or never-share by rules on its folder — before a", "href": "../use-cases/media-pipeline-with-visibility-rules.html", "go": "Open use case"}, {"slug": "r:compounding", "title": "Compounding", "desc": "Small consistent returns beat large occasional ones, given time. What matters is the number of deposits, not the size of one.", "href": "../resources/compounding.html", "go": "Open resource"}], "edges": [["lv:automations", "lv:pipelines"], ["lv:automations", "lv:checks"], ["lv:automations", "c:sbm:hooks-over-hopes"], ["lv:automations", "c:sbm:escalate-by-exception"], ["lv:automations", "c:sbm:silence-is-not-absence-of-failure"], ["lv:automations", "uc:ninety-five-mails-to-one"], ["lv:automations", "uc:media-pipeline-with-visibility-rules"], ["lv:automations", "r:compounding"]], "center": "lv:automations"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="checks.html">&larr; Build Your Own Checks</a> &middot; <a href="integrations.html">Build Your Own Integrations &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

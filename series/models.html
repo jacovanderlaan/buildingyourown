@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Models — Building Your Own</title>
+<meta name="description" content="A small map of what your business is made of, so your notes and your data share one shape." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#structure">Structure</a> &middot; Level 2</div> 
+  <h1>Build Your Own Models</h1>
+  <p class="sub">A small map of what your business is made of, so your notes and your data share one shape.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="memory.html">Memory</a></p>
+  <p>Memory gives your documents a place. A model says what the things in them are: a customer, an order, a job, an agreement, and how they hang together. An AI that knows your model stops guessing what "client" means in your files.</p>
+<h2>You leave with</h2>
+<ul>
+<li>A data model of your business: 5–8 entities (customer, order, product, job, agreement …) with their relationships, as a diagram you can print.</li>
+<li>For each entity, the 3–6 fields you really use, written down as the header fields of your notes in Memory.</li>
+<li>Each entity matched to a proven pattern, so you know what you left out and why.</li>
+<li>Five real records from your own work that fit the model, and one that did not, with the change it caused.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>flower shop</strong> models customer, order, delivery address and occasion, and sees that one customer sends to many addresses.</li>
+<li>A <strong>roofing company</strong> finds that a quote, a job and a warranty are three stages of the same thing, and models it once.</li>
+<li>A <strong>home care team</strong> models client, care plan, visit and caregiver, so a visit always knows which plan it belongs to.</li>
+<li>A <strong>small hotel</strong> separates the guest from the booking, and stops losing returning guests in a list of reservations.</li>
+<li>A <strong>freelance translator</strong> models client, project and invoice, and adds the language pair as a field instead of a folder.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which word in your business means two different things, depending on who says it? Bring it; that is where the model starts.</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>30 min</strong> — Write down the nouns of your business from your own documents: who you work for, what you sell, what you deliver, what you sign.</li>
+<li><strong>40 min</strong> — Match each noun to a proven pattern (party, product, order, agreement, work effort, location, event) and decide what you keep.</li>
+<li><strong>40 min</strong> — Draw the relationships: one customer, many orders; one job, many visits. The AI draws, you correct.</li>
+<li><strong>40 min</strong> — Turn each entity into a short list of fields and add them to the note headers you made in Memory.</li>
+<li><strong>30 min</strong> — Test the model on five real records. Fix the model where a record does not fit, not the record.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>The three lists your business runs on: customers, orders or jobs, and products or services, as a spreadsheet or export.</li>
+<li>Two documents that cross those lists, such as a quote and the invoice that followed it.</li>
+</ul>
+<h2>Tools</h2>
+<p>Claude for the first draft of the model and the diagram; a whiteboard or paper for the arguments; your Memory notes from level 1. Optional: a diagram tool such as draw.io, and DuckDB if you want to generate tables from the model straight away.</p>
+<h2>Example from my own system</h2>
+<p>When my CRM subscription came up for renewal, I did not move to another CRM. I modeled the work itself. A project, a meeting, a deal and a to-do are all one entity, an <em>activity</em>, which can contain other activities. That idea comes from a classic data-modeling pattern, not from me. The mirror underneath now holds 7,574 people, 4,106 companies and 992 projects, and once the model was right, the screens on top were cheap: AI generated them. See <a href="../use-cases/crm-replacement-activity-cockpit.html">Replacing a CRM before the renewal date</a> and <a href="../use-cases/a-data-model-from-a-proven-pattern.html">A data model in an afternoon, from a proven pattern</a>.</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>Modeling the tool instead of the work.</strong> Your current CRM or spreadsheet has columns you never use. Start from what happens in your business, not from the export.</li>
+<li><strong>Inventing what already exists.</strong> Customers and suppliers are parties, contracts are agreements. Start from the pattern and leave things out; do not start from a blank page.</li>
+<li><strong>Twenty entities on day one.</strong> Eight you understand beat twenty you have to explain. Add an entity when a real record needs it.</li>
+</ul>
+<h2>Works best after</h2>
+<p><a href="memory.html"><strong>Build Your Own Memory</strong></a> (level 1). The model gives the notes you made there their fields and their links.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://breakthroughmodeling.com/concepts/proven-patterns.html">Proven Patterns</a> <span class="muted">— Proven shapes you reach for instead of inventing — a pattern captures a repeatable solution (Data Vault, dimensional, temporal) so you compose from known-good parts.</span></li><li><a href="https://breakthroughmodeling.com/concepts/model-the-process.html">Model the Process, Not Just the Model</a> <span class="muted">— Model not just the data model and the transformations, but the whole process — delivery, integration, migration, quality checking, the backroom — and how the system changes over time.</span></li><li><a href="https://structurebeatsmagic.com/concepts/model-the-meaning-you-need.html">Model the Meaning You Need</a> <span class="muted">— The enterprise ontology that models everything ships nothing. Grow shared meaning one high-value use case at a time — and leave batch_id alone.</span></li><li><a href="https://structurebeatsmagic.com/concepts/meaning-before-mechanism.html">Meaning Before Mechanism</a> <span class="muted">— A semantic model is not a technology. The same meaning can ship as a graph, an API, a data product or a contract — decide what it means before deciding what to buy.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/a-data-model-from-a-proven-pattern.html"><img src="../assets/img/a-data-model-from-a-proven-pattern-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A data model in an afternoon, from a proven pattern</strong><span>Parties, products, orders, agreements, locations, accounts and events have been modelled well for decades. Start from those patterns, keep what you need, add your own rules, and generate the database from it.</span></span></a><a class="tile" href="../use-cases/crm-replacement-activity-cockpit.html"><img src="../assets/img/crm-replacement-activity-cockpit-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Replacing a CRM before the renewal date</strong><span>Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixed exit date.</span><span class="badge">in progress</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/data-model-resource-book.html">The Data Model Resource Book (Universal Data Models)</a> <span class="muted">— Proven patterns for parties, agreements, products and work efforts. The CRM replacement on this site uses its Work Effort pattern.</span></li><li><a href="../resources/semantic-software-design.html">Semantic Software Design</a> <span class="muted">— Design starts with meaning: name the concepts of the business before choosing any technology.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/data-models.html">Building your own data models</a><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-models" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-models">{"nodes": [{"slug": "lv:models", "title": "Models", "desc": "A small map of what your business is made of, so your notes and your data share one shape.", "href": "../series/models.html", "go": "Open level"}, {"slug": "lv:memory", "title": "Memory", "desc": "Your notes, documents and decisions, ordered so you and your AI can find them.", "href": "../series/memory.html", "go": "Open level"}, {"slug": "c:btm:proven-patterns", "title": "Proven Patterns", "desc": "Proven shapes you reach for instead of inventing — a pattern captures a repeatable solution (Data Vault, dimensional, temporal) so you compose from kn", "href": "https://breakthroughmodeling.com/concepts/proven-patterns.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:btm:model-the-process", "title": "Model the Process, Not Just the Model", "desc": "Model not just the data model and the transformations, but the whole process — delivery, integration, migration, quality checking, the backroom — and ", "href": "https://breakthroughmodeling.com/concepts/model-the-process.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:sbm:model-the-meaning-you-need", "title": "Model the Meaning You Need", "desc": "The enterprise ontology that models everything ships nothing. Grow shared meaning one high-value use case at a time — and leave batch_id alone.", "href": "https://structurebeatsmagic.com/concepts/model-the-meaning-you-need.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "uc:a-data-model-from-a-proven-pattern", "title": "A data model in an afternoon, from a proven pattern", "desc": "Parties, products, orders, agreements, locations, accounts and events have been modelled well for decades. Start from those patterns, keep what you ne", "href": "../use-cases/a-data-model-from-a-proven-pattern.html", "go": "Open use case"}, {"slug": "uc:crm-replacement-activity-cockpit", "title": "Replacing a CRM before the renewal date", "desc": "Instead of switching to another CRM, I model the work itself — people, organisations and recursive activities — and grow my own cockpit towards a fixe", "href": "../use-cases/crm-replacement-activity-cockpit.html", "go": "Open use case"}, {"slug": "r:data-model-resource-book", "title": "The Data Model Resource Book (Universal Data Models)", "desc": "Proven patterns for parties, agreements, products and work efforts. The CRM replacement on this site uses its Work Effort pattern.", "href": "../resources/data-model-resource-book.html", "go": "Open resource"}, {"slug": "r:semantic-software-design", "title": "Semantic Software Design", "desc": "Design starts with meaning: name the concepts of the business before choosing any technology.", "href": "../resources/semantic-software-design.html", "go": "Open resource"}], "edges": [["lv:models", "lv:memory"], ["lv:models", "c:btm:proven-patterns"], ["lv:models", "c:btm:model-the-process"], ["lv:models", "c:sbm:model-the-meaning-you-need"], ["lv:models", "uc:a-data-model-from-a-proven-pattern"], ["lv:models", "uc:crm-replacement-activity-cockpit"], ["lv:models", "r:data-model-resource-book"], ["lv:models", "r:semantic-software-design"], ["c:btm:proven-patterns", "uc:a-data-model-from-a-proven-pattern"], ["c:btm:proven-patterns", "uc:crm-replacement-activity-cockpit"], ["c:btm:proven-patterns", "r:data-model-resource-book"], ["c:btm:model-the-process", "r:data-model-resource-book"], ["c:sbm:model-the-meaning-you-need", "r:semantic-software-design"], ["uc:a-data-model-from-a-proven-pattern", "r:data-model-resource-book"], ["uc:a-data-model-from-a-proven-pattern", "r:semantic-software-design"], ["uc:crm-replacement-activity-cockpit", "r:data-model-resource-book"]], "center": "lv:models"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="memory.html">&larr; Build Your Own Memory</a> &middot; <a href="sources.html">Build Your Own Sources &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>

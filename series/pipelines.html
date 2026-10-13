@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Build Your Own Pipelines — Building Your Own</title>
+<meta name="description" content="One import that runs by itself: export, clean, load, and the same result every time." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css?v=20261013b" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon points="24,76 84,76 100,92 116,76 176,76 176,124 24,124" fill="#2563eb"/><rect x="24" y="132" width="152" height="48" fill="#2563eb"/><polygon points="100,24 128,52 100,80 72,52" fill="#b88a1b"/></svg><span>Building Your Own<span class="ai">.ai</span></span></a>
+    <nav class="main"><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Build Days</button><span class="navmenu"><a href="../index.html#how">How it works</a><a href="../index.html#day">The day</a><a href="../index.html#for-whom">Who it&#x27;s for</a><a href="../index.html#data">Your data</a><a href="../index.html#organisations">For organisations</a><a href="../index.html#faq">Questions</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Proof</button><span class="navmenu"><a href="../use-cases/index.html">Use cases</a><a href="../use-cases/foundations.html">Data models and building blocks</a><a href="../samples/index.html">Samples</a></span></span><span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Thinking</button><span class="navmenu"><a href="../series/index.html">The Build Your Own series</a><a href="../concepts/index.html">Concepts</a><a href="../topics/index.html">Topics</a><a href="../ideas/index.html">Ideas</a></span></span><span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu"><a href="../articles/index.html">Articles</a><a href="../resources/literature.html">Literature</a><a href="../resources/tools-and-sources.html">Tools and sources</a><a href="../resources/mental-models-and-rules.html">Mental models and rules</a></span></span><a class="navtop" href="../timeline/index.html">Timeline</a><a class="navtop" href="../about/index.html">About</a><a class="cta" href="../register/index.html">Register interest</a></nav>
+  </div>
+</header>
+<main>
+<article class="wrap prose">
+  <div class="eyebrow"><a href="index.html#data">Data</a> &middot; Level 4</div> <span class="badge">proposed</span>
+  <h1>Build Your Own Pipelines</h1>
+  <p class="sub">One import that runs by itself: export, clean, load, and the same result every time.</p>
+  <p class="muted">Duration: half a day &middot; Builds on: <a href="sources.html">Sources</a></p>
+  <p>At the Sources level you brought one source home by hand. A pipeline does that trip for you, every week, in the same way. Pipelines move data. Doing work with it, such as sending a summary or a reminder, is the next level: Automations.</p>
+<h2>You leave with</h2>
+<ul>
+<li>One pipeline for one source: it reads the export, cleans dates, amounts and names, and loads the result into DuckDB.</li>
+<li>A pipeline you can run twice with the same result: no duplicate rows, no lost rows.</li>
+<li>The raw export kept as it arrived, so the whole database can be rebuilt from the files at any time.</li>
+<li>One command to run it, and a short note in your Memory that says what it reads, what it writes and when it last ran.</li>
+</ul>
+<h2>Ideas to try</h2>
+<ul>
+<li>A <strong>bike shop</strong> loads its weekly sales export and its supplier price list into one table, and sees the margin per model.</li>
+<li>An <strong>electrician</strong> pulls the hours from the time-tracking app every Friday and matches them to the jobs.</li>
+<li>A <strong>dental practice</strong> loads the appointment export and counts no-shows per weekday, without retyping anything.</li>
+<li>A <strong>guesthouse</strong> combines the booking platforms' exports into one list of stays, with one row per guest night.</li>
+<li>A <strong>one-person designer</strong> loads the bank export every month and tags each payment to a client.</li>
+</ul>
+<h2>Your turn</h2>
+<p>Which export do you open, clean and copy by hand every month? That is your first pipeline.</p>
+<h2>What we do in the session</h2>
+<ol>
+<li><strong>30 min</strong> — Walk the path by hand once: where the export comes from, what you clean, where it should land.</li>
+<li><strong>60 min</strong> — Build the pipeline with the AI: read the file, fix dates and amounts, write the rows into DuckDB.</li>
+<li><strong>30 min</strong> — Run it twice and count the rows. If the count changes, find out why before you go on.</li>
+<li><strong>30 min</strong> — Add a second export, such as the next month, and check that only the new rows arrive.</li>
+<li><strong>30 min</strong> — Wrap it in one command and write the note: what it reads, what it writes, when it ran.</li>
+</ol>
+<h2>What you bring</h2>
+<ul>
+<li>Two or three exports of the same source from different weeks or months, so we can test that it repeats.</li>
+<li>One row you know is wrong in that export, such as a typo, a missing date or a double entry.</li>
+</ul>
+<h2>Tools</h2>
+<p>Claude Code to write the pipeline; Python; DuckDB (free) as the database. Optional: a spreadsheet to look at the result, and the source list you made at the Sources level.</p>
+<h2>Example from my own system</h2>
+<p>The exports of every bank and card I use land in one database through one small importer: 14,624 transactions since 2002, from 32 accounts, all in the same shape no matter which bank they came from. The export files are kept. When I change a rule or find a bug, I rebuild the database from the files instead of patching it. See <a href="../use-cases/household-ledger.html">A household and business ledger you own</a>.</p>
+<h2>Pitfalls</h2>
+<ul>
+<li><strong>A pipeline that only works once.</strong> If the second run doubles your rows, it is a script, not a pipeline. Run it twice on the day you build it.</li>
+<li><strong>Throwing away the raw file.</strong> Cleaned data you cannot rebuild is a dead end. Keep what arrived, and load from it.</li>
+<li><strong>Trusting the exit code.</strong> "Finished without errors" says nothing about what arrived. Count the rows in and the rows out. A third of the files in one of my imports turned out to be duplicates (<a href="../use-cases/ocr-that-keeps-its-own-receipts.html">Document intake that keeps its own receipts</a>).</li>
+</ul>
+<h2>Works best after</h2>
+<p><a href="sources.html"><strong>Build Your Own Sources</strong></a> (level 3). A pipeline needs a source with an owner and an export you can get every time.</p>
+  <h2>Concepts behind it</h2><ul class="concept-links"><li><a href="https://structurebeatsmagic.com/concepts/deterministic-by-design.html">Deterministic by Design</a> <span class="muted">— Deliberate is whether the structure was chosen; deterministic is whether the output repeats. A toy is neither on the second try.</span></li><li><a href="https://breakthroughmodeling.com/concepts/decompose-and-compose.html">Decompose and Compose</a> <span class="muted">— Break the complex whole into small, self-contained parts you can name, model and check one at a time — the core move of thinking in structures.</span></li><li><a href="https://breakthroughmodeling.com/concepts/fail-fast.html">Fail Fast</a> <span class="muted">— Set experiments up to fail quickly and cheaply, read the signal honestly, and move on — don&#x27;t linger in something that, in the end, may not work.</span></li><li><a href="https://structurebeatsmagic.com/concepts/one-way-publishing.html">One-Way Publishing</a> <span class="muted">— You don&#x27;t sync systems — you publish from one. Sync is where rot starts.</span></li></ul>
+  <h2>Use cases</h2><div class="tiles"><a class="tile" href="../use-cases/household-ledger.html"><img src="../assets/img/household-ledger-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>A household and business ledger you own</strong><span>Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The finance app becomes a view, not a vault.</span></span></a><a class="tile" href="../use-cases/ocr-that-keeps-its-own-receipts.html"><img src="../assets/img/ocr-that-keeps-its-own-receipts-hero.webp" width="1536" height="1024" alt="" loading="lazy" /><span class="tile-body"><strong>Document intake that keeps its own receipts</strong><span>Feeding thousands of documents into a document system, with a ledger that proves what arrived, avoids duplicates, and re-reads the badly recognised ones.</span></span></a></div>
+  <h2>Resources</h2><ul class="concept-links"><li><a href="../resources/duckdb.html">DuckDB</a> <span class="muted">— A database in a single file, no server. Ideal as a rebuildable mirror of files you own.</span></li><li><a href="../resources/pragmatic-programmer.html">The Pragmatic Programmer (20th anniversary edition)</a> <span class="muted">— Tracer bullets, small steps, don&#x27;t repeat yourself. Written for programmers, and more relevant now that the AI is the one typing.</span></li></ul>
+  <div class="chips"><a class="chip" href="../topics/structure-first.html">Data, rules and structure first</a><a class="chip" href="../topics/building-blocks.html">Components and building blocks</a></div>
+  <section class="g-map"><div class="kicker">The neighbourhood</div><h2>How this connects</h2><div class="cmap-wrap" data-src="g-lv-pipelines" data-h="480"><svg></svg></div><script type="application/json" id="g-lv-pipelines">{"nodes": [{"slug": "lv:pipelines", "title": "Pipelines", "desc": "One import that runs by itself: export, clean, load, and the same result every time.", "href": "../series/pipelines.html", "go": "Open level"}, {"slug": "lv:sources", "title": "Sources", "desc": "Every place your data lives, with an owner and a date, and the first one brought home.", "href": "../series/sources.html", "go": "Open level"}, {"slug": "c:sbm:deterministic-by-design", "title": "Deterministic by Design", "desc": "Deliberate is whether the structure was chosen; deterministic is whether the output repeats. A toy is neither on the second try.", "href": "https://structurebeatsmagic.com/concepts/deterministic-by-design.html", "go": "Open concept in Structure Beats Magic"}, {"slug": "c:btm:decompose-and-compose", "title": "Decompose and Compose", "desc": "Break the complex whole into small, self-contained parts you can name, model and check one at a time — the core move of thinking in structures.", "href": "https://breakthroughmodeling.com/concepts/decompose-and-compose.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "c:btm:fail-fast", "title": "Fail Fast", "desc": "Set experiments up to fail quickly and cheaply, read the signal honestly, and move on — don't linger in something that, in the end, may not work.", "href": "https://breakthroughmodeling.com/concepts/fail-fast.html", "go": "Open concept in Breakthrough Modeling"}, {"slug": "uc:household-ledger", "title": "A household and business ledger you own", "desc": "Bank exports from several banks and a credit card land in one database, every row tagged personal or business and categorised by readable rules. The f", "href": "../use-cases/household-ledger.html", "go": "Open use case"}, {"slug": "uc:ocr-that-keeps-its-own-receipts", "title": "Document intake that keeps its own receipts", "desc": "Feeding thousands of documents into a document system, with a ledger that proves what arrived, avoids duplicates, and re-reads the badly recognised on", "href": "../use-cases/ocr-that-keeps-its-own-receipts.html", "go": "Open use case"}, {"slug": "r:duckdb", "title": "DuckDB", "desc": "A database in a single file, no server. Ideal as a rebuildable mirror of files you own.", "href": "../resources/duckdb.html", "go": "Open resource"}, {"slug": "r:pragmatic-programmer", "title": "The Pragmatic Programmer (20th anniversary edition)", "desc": "Tracer bullets, small steps, don't repeat yourself. Written for programmers, and more relevant now that the AI is the one typing.", "href": "../resources/pragmatic-programmer.html", "go": "Open resource"}], "edges": [["lv:pipelines", "lv:sources"], ["lv:pipelines", "c:sbm:deterministic-by-design"], ["lv:pipelines", "c:btm:decompose-and-compose"], ["lv:pipelines", "c:btm:fail-fast"], ["lv:pipelines", "uc:household-ledger"], ["lv:pipelines", "uc:ocr-that-keeps-its-own-receipts"], ["lv:pipelines", "r:duckdb"], ["lv:pipelines", "r:pragmatic-programmer"], ["c:sbm:deterministic-by-design", "r:duckdb"], ["uc:household-ledger", "r:duckdb"]], "center": "lv:pipelines"}</script><link rel="stylesheet" href="../assets/graph-map.css" /><script src="../assets/graph-map.js" defer></script></section>
+  <p><a href="sources.html">&larr; Build Your Own Sources</a> &middot; <a href="checks.html">Build Your Own Checks &rarr;</a></p>
+  <p><a href="index.html">&larr; The whole series</a></p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav class="foot"><a href="../index.html">Build Days</a> <a href="../use-cases/index.html">Use cases</a> <a href="../samples/index.html">Samples</a> <a href="../articles/index.html">Articles</a> <a href="../concepts/index.html">Concepts</a> <a href="../resources/index.html">Resources</a> <a href="../topics/index.html">Topics</a> <a href="../timeline/index.html">Timeline</a> <a href="../privacy/index.html">Privacy</a></nav>
+    <span>&copy; 2026 Jaco van der Laan &middot; buildingyourown.ai</span>
+    <span>Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family</span>
+  </div>
+</footer>
+</body>
+</html>
