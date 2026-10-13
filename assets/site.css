@@ -876,3 +876,6 @@ section.block.about-rest{padding-top:8px}
 .tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile img{width:38%;flex:none;border-bottom:0;border-right:1px solid var(--line);object-fit:cover}
 .tiles:has(> .tile:last-child:nth-child(-n+2)) .tile-body{justify-content:center;padding:20px 24px}
 @media(max-width:640px){.tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile{flex-direction:column}.tiles:has(> .tile:last-child:nth-child(-n+2)) > .tile img{width:100%;border-right:0;border-bottom:1px solid var(--line)}}
+/* graph view (How this connects), 13 Oct 2026 */
+.g-map{margin-top:2.5rem}
+.g-map h2{margin:.2rem 0 1rem}
